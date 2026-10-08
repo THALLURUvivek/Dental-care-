@@ -1,0 +1,152 @@
+<!-- ============ DASH HEAD ============ -->
+<div class="dash-head" data-reveal="up">
+  <div>
+    <span class="eyebrow">Billing</span>
+    <h1 class="dash-head__title">Invoices &amp; Payments</h1>
+    <p>Transparent billing — download receipts and pay online in a couple of clicks.</p>
+  </div>
+  <div class="dash-head__actions">
+    <button class="btn btn-light rounded-pill px-4 border" type="button"><i class="bi bi-download me-1"></i> Statement PDF</button>
+    <a href="appointment.html" class="btn btn-brand rounded-pill px-4"><i class="bi bi-credit-card me-1"></i> Pay pending dues</a>
+  </div>
+</div>
+
+<!-- ============ SUMMARY ============ -->
+<div class="row g-4 mb-4">
+  <div class="col-sm-6 col-xl-4">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-blue"><i class="bi bi-cash-stack"></i></span>
+      <div><strong class="stat-card__val">$<span class="counter" data-count="1840">0</span></strong><span class="stat-card__label">Billed this year</span><span class="stat-card__trend">6 invoices</span></div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-4">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-teal"><i class="bi bi-check2-circle"></i></span>
+      <div><strong class="stat-card__val">$<span class="counter" data-count="1700">0</span></strong><span class="stat-card__label">Paid</span><span class="stat-card__trend is-up">92% settled</span></div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-4">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-red"><i class="bi bi-hourglass-split"></i></span>
+      <div><strong class="stat-card__val">$<span class="counter" data-count="140">0</span></strong><span class="stat-card__label">Outstanding</span><span class="stat-card__trend is-down">Due 20 Oct</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INVOICES ============ -->
+<div class="card-app mb-4" data-reveal="up">
+  <div class="card-app__head">
+    <h5><i class="bi bi-receipt-cutoff me-2 text-brand"></i>All invoices</h5>
+    <div class="pill-tabs pill-tabs--start">
+      <button class="pill-tabs__btn active" type="button" data-filter="all">All</button>
+      <button class="pill-tabs__btn" type="button" data-filter="due">Due</button>
+      <button class="pill-tabs__btn" type="button" data-filter="paid">Paid</button>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-app align-middle">
+      <thead>
+        <tr>
+          <th>Invoice</th>
+          <th>Date</th>
+          <th>Treatment</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th class="text-end">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-status-row="due">
+          <td><strong>INV-2026-031</strong></td>
+          <td>02 Oct 2026</td>
+          <td>Composite filling — tooth 26</td>
+          <td><strong>$140.00</strong></td>
+          <td><span class="badge-soft b-due">Due 20 Oct</span></td>
+          <td class="text-end"><button class="btn btn-xs btn-brand rounded-pill" type="button">Pay now</button></td>
+        </tr>
+        <tr data-status-row="paid">
+          <td><strong>INV-2026-024</strong></td>
+          <td>18 Aug 2026</td>
+          <td>Deep cleaning &amp; fluoride</td>
+          <td><strong>$260.00</strong></td>
+          <td><span class="badge-soft b-paid">Paid</span></td>
+          <td class="text-end"><button class="btn btn-xs btn-light border" type="button"><i class="bi bi-download"></i> Receipt</button></td>
+        </tr>
+        <tr data-status-row="paid">
+          <td><strong>INV-2026-018</strong></td>
+          <td>21 Jun 2026</td>
+          <td>Whitening session #1</td>
+          <td><strong>$349.00</strong></td>
+          <td><span class="badge-soft b-paid">Paid</span></td>
+          <td class="text-end"><button class="btn btn-xs btn-light border" type="button"><i class="bi bi-download"></i> Receipt</button></td>
+        </tr>
+        <tr data-status-row="paid">
+          <td><strong>INV-2026-011</strong></td>
+          <td>12 Jun 2026</td>
+          <td>Aligners — first installment</td>
+          <td><strong>$750.00</strong></td>
+          <td><span class="badge-soft b-paid">Paid</span></td>
+          <td class="text-end"><button class="btn btn-xs btn-light border" type="button"><i class="bi bi-download"></i> Receipt</button></td>
+        </tr>
+        <tr data-status-row="paid">
+          <td><strong>INV-2026-004</strong></td>
+          <td>04 Mar 2026</td>
+          <td>Full-mouth X-ray series</td>
+          <td><strong>$180.00</strong></td>
+          <td><span class="badge-soft b-paid">Paid</span></td>
+          <td class="text-end"><button class="btn btn-xs btn-light border" type="button"><i class="bi bi-download"></i> Receipt</button></td>
+        </tr>
+        <tr data-status-row="paid">
+          <td><strong>INV-2026-001</strong></td>
+          <td>04 Mar 2026</td>
+          <td>New patient consultation</td>
+          <td><strong>$161.00</strong></td>
+          <td><span class="badge-soft b-paid">Paid</span></td>
+          <td class="text-end"><button class="btn btn-xs btn-light border" type="button"><i class="bi bi-download"></i> Receipt</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- PAYMENT METHOD -->
+  <div class="col-lg-6">
+    <div class="card-app h-100" data-reveal="left">
+      <div class="card-app__head"><h5><i class="bi bi-credit-card-2-front me-2 text-brand"></i>Payment method</h5><a href="profile.html">Manage</a></div>
+      <div class="pay-card">
+        <div class="pay-card__chip"></div>
+        <div class="pay-card__num">•••• &nbsp;•••• &nbsp;•••• &nbsp;4821</div>
+        <div class="pay-card__row"><span data-user-name>John Carter</span><span>09/28</span></div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <div><strong class="d-block">Visa Debit</strong><small class="text-muted">Default for auto-pay</small></div>
+        <span class="badge-soft b-confirmed">Active</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTO PAY -->
+  <div class="col-lg-6">
+    <div class="card-app h-100" data-reveal="right">
+      <div class="card-app__head"><h5><i class="bi bi-shield-check me-2 text-brand"></i>Billing preferences</h5></div>
+      <div class="switch-row">
+        <div><strong>Auto-pay invoices</strong><span>Charge my card 2 days before the due date</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Auto-pay invoices"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Email receipts</strong><span>Send a PDF receipt to my inbox after payment</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Email receipts"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Insurance direct billing</strong><span>Send claims to DeltaDental automatically</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Insurance direct billing"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Payment plan reminders</strong><span>Alert me when an installment is approaching</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" aria-label="Payment plan reminders"></div>
+      </div>
+    </div>
+  </div>
+</div>

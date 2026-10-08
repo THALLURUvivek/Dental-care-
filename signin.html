@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sign in to the Lumina Dental patient portal to manage appointments, treatment plans and invoices.">
+<title>Sign In | Lumina Dental Care Patient Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+<style>
+  .preloader{display:none!important}
+  body.is-loading{overflow:auto!important}
+  [data-reveal]{opacity:1!important}
+</style>
+</noscript>
+</head>
+<body class="is-loading">
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__logo">
+      <span class="tooth-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+      <span class="brand-word"><img class="brand-logo" src="images/image.png" alt="Lumina Dental Care"></span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+    <p class="preloader__hint">Preparing your perfect smileâ€¦</p>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ PROGRESS BAR ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar d-none d-lg-block">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between py-2">
+      <div class="topbar__info d-flex gap-4">
+        <span><i class="bi bi-geo-alt-fill"></i> 214 Riverside Avenue, New York, NY</span>
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 555-0199</span>
+        <span><i class="bi bi-clock-fill"></i> Monâ€“Sat: 08:00 â€“ 20:00</span>
+      </div>
+      <div class="topbar__social d-flex align-items-center gap-3">
+        <span class="text-uppercase small">Follow us</span>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <span class="brand-mark"><i class="bi bi-stars"></i></span>
+      <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMenu" aria-controls="navMenu" aria-label="Toggle navigation">
+      <span class="toggler-box"><span></span><span></span><span></span></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end nav-offcanvas" tabindex="-1" id="navMenu" aria-labelledby="navMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-uppercase" id="navMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body align-items-lg-center">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link " href="why.html">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link " href="team.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link " href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link " href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3 mt-4 mt-lg-0 ms-lg-4">
+          <a href="tel:+18005550199" class="nav-phone d-none d-lg-flex align-items-center gap-2">
+            <i class="bi bi-telephone-fill"></i>
+            <span><small class="d-block lh-1 text-uppercase">Call us now</small>+1 800 555 0199</span>
+          </a>
+          <a href="signin.html" class="btn btn-brand btn-sm px-4 rounded-pill nav-cta d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-fill"></i> Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============ PAGE CONTENT ============ -->
+
+<!-- ============ AUTH / SIGN IN ============ -->
+<section class="auth">
+  <div class="container">
+    <div class="auth__shell" data-reveal="scale">
+
+      <aside class="auth__aside">
+        <img class="auth__photo" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+        <a class="auth__brand" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+
+        <div>
+          <span class="eyebrow eyebrow--light">Patient Portal</span>
+          <h2>Welcome back to your <span class="accent-text">smile journey</span></h2>
+          <p class="auth__lead">Sign in to manage appointments, view treatment plans and download invoices â€” all in one secure place.</p>
+          <ul class="auth__perks">
+            <li><i class="bi bi-calendar2-check-fill"></i><span>Book or reschedule visits in seconds</span></li>
+            <li><i class="bi bi-file-earmark-medical-fill"></i><span>Access X-rays, prescriptions and history</span></li>
+            <li><i class="bi bi-shield-lock-fill"></i><span>Bank-grade encryption on your records</span></li>
+          </ul>
+        </div>
+
+        <div class="auth__quote">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Patient">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Patient">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Patient">
+          </div>
+          <p class="mb-0">â€œMy whole family's care lives here now â€” bookings, reminders, even my kids' sealant records.â€</p>
+          <small class="auth__quote-by">â€” Maria G., patient since 2021</small>
+        </div>
+      </aside>
+
+      <div class="auth__panel">
+        <div class="auth__head">
+          <div>
+            <h3>Sign in</h3>
+            <p>Use your email to access the portal.</p>
+          </div>
+          <p class="auth__switch">New here? <a href="signup.html">Create account</a></p>
+        </div>
+
+        <div class="auth__alert d-none" id="authAlert" role="status">
+          <i class="bi bi-check-circle-fill"></i>
+          <div>
+            <strong>Account created successfully</strong>
+            <p class="mb-0">Welcome to Lumina Dental â€” sign in with your new credentials to open your portal.</p>
+          </div>
+        </div>
+
+        <div class="auth__social">
+          <button type="button" class="btn-auth-social" data-social="Google"><i class="bi bi-google"></i> Google</button>
+          <button type="button" class="btn-auth-social" data-social="Apple"><i class="bi bi-apple"></i> Apple</button>
+        </div>
+        <div class="auth__divider"><span>or continue with email</span></div>
+
+        <form data-auth="signin" novalidate>
+          <div class="field">
+            <label for="siEmail">Email address</label>
+            <div class="field__box">
+              <i class="bi bi-envelope"></i>
+              <input type="email" class="form-control" id="siEmail" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="siPass">Password</label>
+            <div class="field__box">
+              <i class="bi bi-lock"></i>
+              <input type="password" class="form-control" id="siPass" placeholder="At least 8 characters" required minlength="8" autocomplete="current-password">
+              <button type="button" class="field__eye" data-toggle-pass="siPass" aria-label="Show password"><i class="bi bi-eye"></i></button>
+            </div>
+            <div class="invalid-feedback">Password must be at least 8 characters.</div>
+          </div>
+
+          <div class="auth__row">
+            <label class="auth__check"><input type="checkbox" checked> <span>Remember me</span></label>
+            <a href="forgot.html">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-brand w-100 auth__submit">Sign In <i class="bi bi-arrow-right ms-2"></i></button>
+        </form>
+
+        <p class="auth__note">By continuing you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+        <p class="text-white-50 mb-4">A modern dental studio where advanced technology meets genuine human care â€” because everyone deserves a smile they're proud of.</p>
+        <div class="footer__social d-flex gap-2">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer__title">Explore</h6>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why.html">Why Choose Us</a></li>
+          <li><a href="team.html">Our Doctors</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="signin.html">Patient Sign In</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer__title">Treatments</h6>
+        <ul class="footer__links">
+          <li><a href="services.html">Dental Implants</a></li>
+          <li><a href="services.html">Invisible Aligners</a></li>
+          <li><a href="services.html">Teeth Whitening</a></li>
+          <li><a href="services.html">Root Canal</a></li>
+          <li><a href="services.html">Kids Dentistry</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer__title">Newsletter</h6>
+        <p class="text-white-50 small">Oral-care tips and exclusive offers, once a month. No spam.</p>
+        <form class="footer__news d-flex gap-2 mb-3" id="newsForm">
+          <input type="email" class="form-control rounded-pill" placeholder="Your email address" required aria-label="Email address">
+          <button class="btn btn-brand rounded-pill px-4" type="submit"><i class="bi bi-send-fill"></i></button>
+        </form>
+        <div class="footer__hours small text-white-50">
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Mon â€“ Fri</span><strong class="text-white">08:00 â€“ 20:00</strong></div>
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Saturday</span><strong class="text-white">09:00 â€“ 17:00</strong></div>
+          <div class="d-flex justify-content-between py-2"><span>Sunday</span><strong class="text-white">Emergency only</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom d-flex flex-wrap justify-content-between align-items-center gap-2 py-3">
+      <p class="mb-0 small text-white-50">Â© 2026 Lumina Dental Care. All rights reserved.</p>
+      <div class="d-flex gap-3 small">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

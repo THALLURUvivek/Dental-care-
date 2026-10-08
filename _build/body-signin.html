@@ -1,0 +1,91 @@
+<!-- ============ AUTH / SIGN IN ============ -->
+<section class="auth">
+  <div class="container">
+    <div class="auth__shell" data-reveal="scale">
+
+      <aside class="auth__aside">
+        <img class="auth__photo" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+        <a class="auth__brand" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+
+        <div>
+          <span class="eyebrow eyebrow--light">Patient Portal</span>
+          <h2>Welcome back to your <span class="accent-text">smile journey</span></h2>
+          <p class="auth__lead">Sign in to manage appointments, view treatment plans and download invoices — all in one secure place.</p>
+          <ul class="auth__perks">
+            <li><i class="bi bi-calendar2-check-fill"></i><span>Book or reschedule visits in seconds</span></li>
+            <li><i class="bi bi-file-earmark-medical-fill"></i><span>Access X-rays, prescriptions and history</span></li>
+            <li><i class="bi bi-shield-lock-fill"></i><span>Bank-grade encryption on your records</span></li>
+          </ul>
+        </div>
+
+        <div class="auth__quote">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Patient">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Patient">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Patient">
+          </div>
+          <p class="mb-0">“My whole family's care lives here now — bookings, reminders, even my kids' sealant records.”</p>
+          <small class="auth__quote-by">— Maria G., patient since 2021</small>
+        </div>
+      </aside>
+
+      <div class="auth__panel">
+        <div class="auth__head">
+          <div>
+            <h3>Sign in</h3>
+            <p>Use your email to access the portal.</p>
+          </div>
+          <p class="auth__switch">New here? <a href="signup.html">Create account</a></p>
+        </div>
+
+        <div class="auth__alert d-none" id="authAlert" role="status">
+          <i class="bi bi-check-circle-fill"></i>
+          <div>
+            <strong>Account created successfully</strong>
+            <p class="mb-0">Welcome to Lumina Dental — sign in with your new credentials to open your portal.</p>
+          </div>
+        </div>
+
+        <div class="auth__social">
+          <button type="button" class="btn-auth-social" data-social="Google"><i class="bi bi-google"></i> Google</button>
+          <button type="button" class="btn-auth-social" data-social="Apple"><i class="bi bi-apple"></i> Apple</button>
+        </div>
+        <div class="auth__divider"><span>or continue with email</span></div>
+
+        <form data-auth="signin" novalidate>
+          <div class="field">
+            <label for="siEmail">Email address</label>
+            <div class="field__box">
+              <i class="bi bi-envelope"></i>
+              <input type="email" class="form-control" id="siEmail" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="siPass">Password</label>
+            <div class="field__box">
+              <i class="bi bi-lock"></i>
+              <input type="password" class="form-control" id="siPass" placeholder="At least 8 characters" required minlength="8" autocomplete="current-password">
+              <button type="button" class="field__eye" data-toggle-pass="siPass" aria-label="Show password"><i class="bi bi-eye"></i></button>
+            </div>
+            <div class="invalid-feedback">Password must be at least 8 characters.</div>
+          </div>
+
+          <div class="auth__row">
+            <label class="auth__check"><input type="checkbox" checked> <span>Remember me</span></label>
+            <a href="forgot.html">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-brand w-100 auth__submit">Sign In <i class="bi bi-arrow-right ms-2"></i></button>
+        </form>
+
+        <p class="auth__note">By continuing you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+      </div>
+
+    </div>
+  </div>
+</section>

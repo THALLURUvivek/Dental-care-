@@ -1,0 +1,124 @@
+<!-- ============ DASH HEAD ============ -->
+<div class="dash-head" data-reveal="up">
+  <div>
+    <span class="eyebrow">Your schedule</span>
+    <h1 class="dash-head__title">Appointments</h1>
+    <p>Track upcoming visits and review your past ones — reschedule anytime.</p>
+  </div>
+  <div class="dash-head__actions">
+    <a href="appointment.html" class="btn btn-brand rounded-pill px-4"><i class="bi bi-plus-lg me-1"></i> Book new appointment</a>
+  </div>
+</div>
+
+<!-- ============ FILTERS ============ -->
+<div class="pill-tabs mb-4" role="tablist" data-reveal="up">
+  <button class="pill-tabs__btn active" type="button" data-filter="all">All <span>6</span></button>
+  <button class="pill-tabs__btn" type="button" data-filter="upcoming">Upcoming <span>3</span></button>
+  <button class="pill-tabs__btn" type="button" data-filter="completed">Completed <span>2</span></button>
+  <button class="pill-tabs__btn" type="button" data-filter="cancelled">Cancelled <span>1</span></button>
+</div>
+
+<!-- ============ APPOINTMENT LIST ============ -->
+<div class="card-app" data-reveal="up">
+  <div class="table-responsive">
+    <table class="table table-app align-middle">
+      <thead>
+        <tr>
+          <th>Date &amp; time</th>
+          <th>Treatment</th>
+          <th>Dentist</th>
+          <th>Room</th>
+          <th>Status</th>
+          <th class="text-end">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-status-row="upcoming">
+          <td><strong>15 Oct 2026</strong><br><small class="text-muted">10:30 – 11:15</small></td>
+          <td>Routine cleaning &amp; check-up</td>
+          <td>Dr. Sofia Reyes</td>
+          <td>Floor 2, Room 4</td>
+          <td><span class="badge-soft b-confirmed">Confirmed</span></td>
+          <td class="text-end">
+            <a class="btn btn-xs btn-light border" href="appointment.html">Reschedule</a>
+            <button class="btn btn-xs btn-light border text-danger" type="button">Cancel</button>
+          </td>
+        </tr>
+        <tr data-status-row="upcoming">
+          <td><strong>02 Nov 2026</strong><br><small class="text-muted">15:00 – 16:00</small></td>
+          <td>Aligner progress review</td>
+          <td>Dr. Amir Khan</td>
+          <td>Floor 1, Room 1</td>
+          <td><span class="badge-soft b-pending">Pending</span></td>
+          <td class="text-end">
+            <a class="btn btn-xs btn-light border" href="appointment.html">Reschedule</a>
+            <button class="btn btn-xs btn-light border text-danger" type="button">Cancel</button>
+          </td>
+        </tr>
+        <tr data-status-row="upcoming">
+          <td><strong>19 Nov 2026</strong><br><small class="text-muted">09:00 – 09:45</small></td>
+          <td>Whitening session #2</td>
+          <td>Dr. Lena Fischer</td>
+          <td>Floor 3, Studio</td>
+          <td><span class="badge-soft b-confirmed">Confirmed</span></td>
+          <td class="text-end">
+            <a class="btn btn-xs btn-light border" href="appointment.html">Reschedule</a>
+            <button class="btn btn-xs btn-light border text-danger" type="button">Cancel</button>
+          </td>
+        </tr>
+        <tr data-status-row="completed">
+          <td><strong>02 Oct 2026</strong><br><small class="text-muted">11:00 – 12:00</small></td>
+          <td>Composite filling — tooth 26</td>
+          <td>Dr. Sofia Reyes</td>
+          <td>Floor 2, Room 3</td>
+          <td><span class="badge-soft b-completed">Completed</span></td>
+          <td class="text-end"><a class="btn btn-xs btn-light border" href="treatments.html">Records</a></td>
+        </tr>
+        <tr data-status-row="completed">
+          <td><strong>18 Aug 2026</strong><br><small class="text-muted">14:00 – 14:40</small></td>
+          <td>Deep cleaning &amp; fluoride</td>
+          <td>Dr. Marcus Webb</td>
+          <td>Floor 2, Room 4</td>
+          <td><span class="badge-soft b-completed">Completed</span></td>
+          <td class="text-end"><a class="btn btn-xs btn-light border" href="treatments.html">Records</a></td>
+        </tr>
+        <tr data-status-row="cancelled">
+          <td><strong>21 Jul 2026</strong><br><small class="text-muted">18:00 – 18:30</small></td>
+          <td>Teeth whitening consult</td>
+          <td>Dr. Lena Fischer</td>
+          <td>Floor 3, Studio</td>
+          <td><span class="badge-soft b-cancelled">Cancelled</span></td>
+          <td class="text-end"><a class="btn btn-xs btn-light border" href="appointment.html">Rebook</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 pt-3 border-top">
+    <small class="text-muted">Showing 6 of 6 appointments</small>
+    <div class="d-flex gap-2">
+      <button class="btn btn-xs btn-light border" type="button" disabled>Previous</button>
+      <button class="btn btn-xs btn-light border" type="button" disabled>Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TIPS ============ -->
+<div class="row g-4 mt-1">
+  <div class="col-md-6">
+    <div class="info-card h-100" data-reveal="left">
+      <span class="info-card__icon"><i class="bi bi-arrow-repeat"></i></span>
+      <h5>Need a different time?</h5>
+      <p>Reschedule up to 6 hours before your visit without any fee — slots refresh every morning at 07:00.</p>
+      <a href="appointment.html">Open booking page <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="info-card h-100" data-reveal="right">
+      <span class="info-card__icon"><i class="bi bi-door-open-fill"></i></span>
+      <h5>First time at the clinic?</h5>
+      <p>Check-in kiosks are on Floor 1. Your insurance card and ID are already verified in your profile.</p>
+      <a href="profile.html">Review my details <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</div>

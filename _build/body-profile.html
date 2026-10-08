@@ -1,0 +1,206 @@
+<!-- ============ DASH HEAD ============ -->
+<div class="dash-head" data-reveal="up">
+  <div>
+    <span class="eyebrow">Your account</span>
+    <h1 class="dash-head__title">Profile &amp; Settings</h1>
+    <p>Keep your details current so every visit check-in takes seconds.</p>
+  </div>
+  <div class="dash-head__actions">
+    <button class="btn btn-brand rounded-pill px-4" type="submit" form="profileForm"><i class="bi bi-check2 me-1"></i> Save changes</button>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- MAIN PROFILE -->
+  <div class="col-lg-8">
+    <div class="card-app mb-4" data-reveal="up">
+      <div class="card-app__head">
+        <h5><i class="bi bi-person-vcard me-2 text-brand"></i>Personal information</h5>
+        <span class="badge-soft b-confirmed">Verified</span>
+      </div>
+
+      <div class="profile-top mb-4">
+        <div class="profile-top__avatar">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Profile photo">
+          <button type="button" aria-label="Change photo"><i class="bi bi-camera-fill"></i></button>
+        </div>
+        <div>
+          <h5 class="mb-1" data-user-name>John Carter</h5>
+          <p class="text-muted mb-2 small">Patient ID <strong>PT-10482</strong> · Member since Mar 2026</p>
+          <span class="badge-soft b-pending">Gold Smile Plan</span>
+        </div>
+      </div>
+
+      <form id="profileForm" data-auth="profile" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfName">Full name</label>
+              <div class="field__box"><i class="bi bi-person"></i>
+                <input type="text" class="form-control" id="pfName" name="name" value="John Carter" required autocomplete="name">
+              </div>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfEmail">Email address</label>
+              <div class="field__box"><i class="bi bi-envelope"></i>
+                <input type="email" class="form-control" id="pfEmail" value="john.carter@email.com" required autocomplete="email">
+              </div>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfPhone">Phone number</label>
+              <div class="field__box"><i class="bi bi-telephone"></i>
+                <input type="tel" class="form-control" id="pfPhone" value="+1 555 014 7788" required autocomplete="tel">
+              </div>
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfDob">Date of birth</label>
+              <div class="field__box"><i class="bi bi-calendar3"></i>
+                <input type="date" class="form-control" id="pfDob" value="1992-04-18" required>
+              </div>
+              <div class="invalid-feedback">Please choose your date of birth.</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="field">
+              <label for="pfAddr">Home address</label>
+              <div class="field__box"><i class="bi bi-geo-alt"></i>
+                <input type="text" class="form-control" id="pfAddr" value="88 Willow Street, Brooklyn, NY 11201" autocomplete="street-address">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfIns">Insurance provider</label>
+              <div class="field__box"><i class="bi bi-shield-lock"></i>
+                <input type="text" class="form-control" id="pfIns" value="DeltaDental PPO">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfEmergency">Emergency contact</label>
+              <div class="field__box"><i class="bi bi-people"></i>
+                <input type="tel" class="form-control" id="pfEmergency" value="+1 555 014 9911">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-brand rounded-pill px-4 mt-2">Save changes</button>
+      </form>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="card-app" id="security" data-reveal="up">
+      <div class="card-app__head">
+        <h5><i class="bi bi-shield-lock me-2 text-brand"></i>Security</h5>
+        <span class="badge-soft b-completed">2FA on</span>
+      </div>
+
+      <form data-auth="password" novalidate>
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="field">
+              <label for="spCurrent">Current password</label>
+              <div class="field__box"><i class="bi bi-lock"></i>
+                <input type="password" class="form-control" id="spCurrent" placeholder="Enter current password" required minlength="8" autocomplete="current-password">
+                <button type="button" class="field__eye" data-toggle-pass="spCurrent" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Enter your current password (min 8 characters).</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="spNew">New password</label>
+              <div class="field__box"><i class="bi bi-key"></i>
+                <input type="password" class="form-control" id="spNew" placeholder="At least 8 characters" required minlength="8" autocomplete="new-password">
+                <button type="button" class="field__eye" data-toggle-pass="spNew" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Use at least 8 characters.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="spNew2">Confirm new password</label>
+              <div class="field__box"><i class="bi bi-key-fill"></i>
+                <input type="password" class="form-control" id="spNew2" placeholder="Repeat new password" required minlength="8" data-match="spNew" autocomplete="new-password">
+                <button type="button" class="field__eye" data-toggle-pass="spNew2" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Passwords don't match.</div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-brand rounded-pill px-4">Update password</button>
+          <button class="btn btn-light rounded-pill px-4 border" type="button"><i class="bi bi-phone me-1"></i> Reset 2FA device</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SIDE SETTINGS -->
+  <div class="col-lg-4">
+    <div class="card-app mb-4" data-reveal="right">
+      <div class="card-app__head"><h5>Notifications</h5></div>
+      <div class="switch-row">
+        <div><strong>Appointment reminders</strong><span>Email + SMS, 24h before</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Appointment reminders"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Invoice alerts</strong><span>When a new invoice is issued</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Invoice alerts"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Oral-care tips</strong><span>Monthly newsletter from our dentists</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" aria-label="Oral-care tips"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Promotions</strong><span>Member-only offers on whitening</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" aria-label="Promotions"></div>
+      </div>
+    </div>
+
+    <div class="card-app mb-4" data-reveal="right">
+      <div class="card-app__head"><h5>Preferences</h5></div>
+      <div class="field mb-3">
+        <label for="pfLang">Preferred language</label>
+        <div class="field__box"><i class="bi bi-translate"></i>
+          <select class="form-control form-select" id="pfLang">
+            <option selected>English</option>
+            <option>Español</option>
+            <option>Français</option>
+            <option>Deutsch</option>
+          </select>
+        </div>
+      </div>
+      <div class="field mb-0">
+        <label for="pfClinic">Preferred clinic</label>
+        <div class="field__box"><i class="bi bi-building"></i>
+          <select class="form-control form-select" id="pfClinic">
+            <option selected>Riverside Avenue (HQ)</option>
+            <option>Brooklyn Heights</option>
+            <option>Queens Plaza</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" data-reveal="right">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      <div>
+        <strong>Sign out everywhere</strong>
+        <p class="mb-2">Ends all sessions on other devices.</p>
+        <button class="btn btn-sm btn-light border rounded-pill px-3" type="button" id="signOutAll">Sign out all sessions</button>
+      </div>
+    </div>
+  </div>
+</div>

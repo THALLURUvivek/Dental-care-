@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The story, values and milestones behind Lumina Dental Care â€” a clinic built around how patients feel, not just their teeth.">
+<title>About Us | Lumina Dental Care</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+<style>
+  .preloader{display:none!important}
+  body.is-loading{overflow:auto!important}
+  [data-reveal]{opacity:1!important}
+</style>
+</noscript>
+</head>
+<body class="is-loading">
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__logo">
+      <span class="tooth-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+      <span class="brand-word"><img class="brand-logo" src="images/image.png" alt="Lumina Dental Care"></span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+    <p class="preloader__hint">Preparing your perfect smileâ€¦</p>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ PROGRESS BAR ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar d-none d-lg-block">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between py-2">
+      <div class="topbar__info d-flex gap-4">
+        <span><i class="bi bi-geo-alt-fill"></i> 214 Riverside Avenue, New York, NY</span>
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 555-0199</span>
+        <span><i class="bi bi-clock-fill"></i> Monâ€“Sat: 08:00 â€“ 20:00</span>
+      </div>
+      <div class="topbar__social d-flex align-items-center gap-3">
+        <span class="text-uppercase small">Follow us</span>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <span class="brand-mark"><i class="bi bi-stars"></i></span>
+      <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMenu" aria-controls="navMenu" aria-label="Toggle navigation">
+      <span class="toggler-box"><span></span><span></span><span></span></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end nav-offcanvas" tabindex="-1" id="navMenu" aria-labelledby="navMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-uppercase" id="navMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body align-items-lg-center">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link " href="why.html">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link " href="team.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link " href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link " href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3 mt-4 mt-lg-0 ms-lg-4">
+          <a href="tel:+18005550199" class="nav-phone d-none d-lg-flex align-items-center gap-2">
+            <i class="bi bi-telephone-fill"></i>
+            <span><small class="d-block lh-1 text-uppercase">Call us now</small>+1 800 555 0199</span>
+          </a>
+          <a href="signin.html" class="btn btn-brand btn-sm px-4 rounded-pill nav-cta d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-fill"></i> Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============ PAGE CONTENT ============ -->
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="page-hero__grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="crumbs" data-hero="1">
+      <a href="index.html">Home</a> <span class="sep">/</span> <span class="current">About Us</span>
+    </div>
+    <h1 class="page-hero__title" data-split>We make dentistry something you actually look forward to</h1>
+    <p class="page-hero__lead" data-hero="2">Founded in 2002, Lumina Dental grew from a two-chair practice into a full-service smile studio â€” without ever losing the personal touch.</p>
+    <div class="page-hero__actions" data-hero="3">
+      <a href="appointment.html" class="btn btn-brand btn-lg rounded-pill px-4">Book a Visit <i class="bi bi-arrow-right ms-2"></i></a>
+      <a href="team.html" class="btn btn-outline-dark btn-lg rounded-pill px-4">Meet Our Dentists</a>
+    </div>
+    <div class="strip-stats" data-hero="4">
+      <div><strong class="counter" data-count="24">0</strong><span>Years Open</span></div>
+      <div><strong class="counter" data-count="12">0</strong><span>Specialists</span></div>
+      <div><strong class="counter" data-count="35">0</strong><span>k Smiles</span></div>
+      <div><strong class="counter" data-count="4.9">0</strong><span>Avg. Rating</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ OUR STORY ============ -->
+<section class="section about">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <div class="about__visual">
+          <div class="about__img about__img--main" data-reveal="left">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Dentist treating a patient" class="img-fluid w-100" loading="lazy" width="800" height="900">
+          </div>
+          <div class="about__img about__img--sub" data-reveal="right">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Dental technology" class="img-fluid w-100" loading="lazy" width="600" height="500">
+          </div>
+          <div class="about__experience" data-reveal="up">
+            <strong class="counter" data-count="24">0</strong>
+            <span>Years of<br>Excellence</span>
+          </div>
+          <div class="about__dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 ps-lg-5">
+        <div class="section-head text-lg-start" data-reveal="up">
+          <span class="eyebrow">Our Story</span>
+          <h2 class="section-title">A clinic built around <span class="accent-text">how you feel</span></h2>
+          <p class="section-sub">
+            Dr. Elena Vasquez opened Lumina with one belief: clinical excellence means nothing if patients are
+            scared to walk through the door. Twenty-four years later, that idea still shapes every room, every
+            protocol and every conversation in our clinic.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6" data-reveal="up">
+            <div class="feature-tile">
+              <span class="feature-tile__icon"><i class="bi bi-eye"></i></span>
+              <div>
+                <h5>Our Vision</h5>
+                <p class="mb-0">To make premium dental care calm, transparent and accessible for every family in the city.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-reveal="up">
+            <div class="feature-tile">
+              <span class="feature-tile__icon"><i class="bi bi-bullseye"></i></span>
+              <div>
+                <h5>Our Mission</h5>
+                <p class="mb-0">Deliver evidence-based treatment with modern technology and zero judgement â€” ever.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-box mt-4" data-reveal="up">
+          <i class="bi bi-quote"></i>
+          <div>
+            <h6>â€œTreat the person, then the tooth.â€</h6>
+            <p>That sentence is printed on every operatory door in our clinic â€” and it's the first thing every new team member learns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUES ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head text-center mx-auto" data-reveal="up">
+      <span class="eyebrow">What We Stand For</span>
+      <h2 class="section-title">Four values, <span class="accent-text">non-negotiable</span></h2>
+      <p class="section-sub mx-auto">They guide how we hire, how we treat, and how we charge.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-heart-pulse"></i></span>
+          <h4>Gentleness First</h4>
+          <p>Needle-free anesthesia, sedation options and a team trained in anxiety-aware care.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-shield-check"></i></span>
+          <h4>Honest Advice</h4>
+          <p>We only recommend treatment you actually need â€” and we'll tell you when you don't.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-cpu"></i></span>
+          <h4>Digital Precision</h4>
+          <p>3D CBCT scans, intraoral cameras and CAD/CAM crowns for predictable outcomes.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-people"></i></span>
+          <h4>Whole Family</h4>
+          <p>From first baby teeth to full-mouth implants â€” one clinic for every generation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="section-head text-lg-start" data-reveal="up">
+          <span class="eyebrow">Milestones</span>
+          <h2 class="section-title">Two decades of <span class="accent-text">steady growth</span></h2>
+          <p class="section-sub">From a two-chair room on Riverside Avenue to a 12-chair digital smile studio.</p>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="timeline" data-reveal="up">
+          <div class="timeline__item">
+            <span class="timeline__year">2002</span>
+            <h5>The first two chairs</h5>
+            <p>Dr. Elena Vasquez opens a small family practice with one hygienist and a promise of unhurried appointments.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__year">2009</span>
+            <h5>Implant centre opens</h5>
+            <p>We introduce guided implant surgery and become one of the first clinics in the region with an in-house CBCT.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__year">2015</span>
+            <h5>Purpose-built studio</h5>
+            <p>Moving into our Riverside location: 12 operatories, a kid zone, private consultation suites and heated dental chairs.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__year">2020</span>
+            <h5>Same-day digital lab</h5>
+            <p>In-house CAD/CAM milling means crowns, veneers and onlays designed, milled and fitted in a single visit.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__year">2026</span>
+            <h5>12,000 smiles later</h5>
+            <p>A team of 18 specialists, an award-winning clinic and a 99% recommendation rate â€” still counting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTERS ============ -->
+<section class="section section-alt pt-5 pb-5">
+  <div class="container">
+    <div class="row g-4 counters-band">
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center">
+          <strong class="counter" data-count="12">0</strong><span>k+</span>
+          <p>Happy Patients</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center">
+          <strong class="counter" data-count="18">0</strong><span>+</span>
+          <p>Expert Dentists</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center">
+          <strong class="counter" data-count="46">0</strong><span>k</span>
+          <p>Treatments Done</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center">
+          <strong class="counter" data-count="99">0</strong><span>%</span>
+          <p>Would Recommend</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM PREVIEW ============ -->
+<section class="section team">
+  <div class="container">
+    <div class="section-head text-center mx-auto" data-reveal="up">
+      <span class="eyebrow">Leadership</span>
+      <h2 class="section-title">The people running <span class="accent-text">our clinic</span></h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3" data-reveal="up">
+        <div class="team-card">
+          <div class="team-card__img">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Dr. Amara Chen" class="img-fluid w-100" loading="lazy" width="600" height="720">
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="team-card__body">
+            <h5>Dr. Amara Chen</h5>
+            <span>Chief Cosmetic Dentist</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-reveal="up">
+        <div class="team-card">
+          <div class="team-card__img">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Dr. Marcus Reid" class="img-fluid w-100" loading="lazy" width="600" height="720">
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="team-card__body">
+            <h5>Dr. Marcus Reid</h5>
+            <span>Implant Surgeon</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-reveal="up">
+        <div class="team-card">
+          <div class="team-card__img">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80" alt="Dr. Sofia Alvarez" class="img-fluid w-100" loading="lazy" width="600" height="720">
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="team-card__body">
+            <h5>Dr. Sofia Alvarez</h5>
+            <span>Pediatric Dentist</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-reveal="up">
+        <div class="team-card">
+          <div class="team-card__img">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80" alt="Dr. Elias Novak" class="img-fluid w-100" loading="lazy" width="600" height="720">
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="team-card__body">
+            <h5>Dr. Elias Novak</h5>
+            <span>Orthodontist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-reveal="up">
+      <a href="team.html" class="btn btn-brand btn-lg rounded-pill px-5">See All Specialists <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="cta-band d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4" data-reveal="up">
+      <div>
+        <h2>Come see the clinic <span class="accent-text">for yourself</span></h2>
+        <p>Book a free walkthrough â€” meet the team, see the technology and get a no-obligation quote.</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3 position-relative">
+        <a href="appointment.html" class="btn btn-light btn-lg rounded-pill px-4">Book Appointment <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="services.html" class="btn btn-lg btn-outline-light rounded-pill px-4">Browse Treatments</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+        <p class="text-white-50 mb-4">A modern dental studio where advanced technology meets genuine human care â€” because everyone deserves a smile they're proud of.</p>
+        <div class="footer__social d-flex gap-2">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer__title">Explore</h6>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why.html">Why Choose Us</a></li>
+          <li><a href="team.html">Our Doctors</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="signin.html">Patient Sign In</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer__title">Treatments</h6>
+        <ul class="footer__links">
+          <li><a href="services.html">Dental Implants</a></li>
+          <li><a href="services.html">Invisible Aligners</a></li>
+          <li><a href="services.html">Teeth Whitening</a></li>
+          <li><a href="services.html">Root Canal</a></li>
+          <li><a href="services.html">Kids Dentistry</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer__title">Newsletter</h6>
+        <p class="text-white-50 small">Oral-care tips and exclusive offers, once a month. No spam.</p>
+        <form class="footer__news d-flex gap-2 mb-3" id="newsForm">
+          <input type="email" class="form-control rounded-pill" placeholder="Your email address" required aria-label="Email address">
+          <button class="btn btn-brand rounded-pill px-4" type="submit"><i class="bi bi-send-fill"></i></button>
+        </form>
+        <div class="footer__hours small text-white-50">
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Mon â€“ Fri</span><strong class="text-white">08:00 â€“ 20:00</strong></div>
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Saturday</span><strong class="text-white">09:00 â€“ 17:00</strong></div>
+          <div class="d-flex justify-content-between py-2"><span>Sunday</span><strong class="text-white">Emergency only</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom d-flex flex-wrap justify-content-between align-items-center gap-2 py-3">
+      <p class="mb-0 small text-white-50">Â© 2026 Lumina Dental Care. All rights reserved.</p>
+      <div class="d-flex gap-3 small">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

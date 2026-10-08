@@ -1,0 +1,118 @@
+<!-- ============ AUTH / SIGN UP ============ -->
+<section class="auth">
+  <div class="container">
+    <div class="auth__shell" data-reveal="scale">
+
+      <aside class="auth__aside">
+        <img class="auth__photo" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+        <a class="auth__brand" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+
+        <div>
+          <span class="eyebrow eyebrow--light">Join The Family</span>
+          <h2>Start your <span class="accent-text">smile journey</span> today</h2>
+          <p class="auth__lead">Create your free account and get everything the portal offers — no paperwork, no waiting on hold.</p>
+          <ul class="auth__perks">
+            <li><i class="bi bi-gift-fill"></i><span>Free first consultation for new patients</span></li>
+            <li><i class="bi bi-bell-fill"></i><span>Smart reminders before every appointment</span></li>
+            <li><i class="bi bi-tag-fill"></i><span>Member-only pricing on cleanings & whitening</span></li>
+          </ul>
+        </div>
+
+        <div class="auth__quote">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Patient">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Patient">
+            <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=100&q=80" alt="Patient">
+          </div>
+          <p class="mb-0">“Signed up on a Sunday, had my cleaning booked for Monday morning. Effortless.”</p>
+          <small class="auth__quote-by">— Daniel R., patient since 2023</small>
+        </div>
+      </aside>
+
+      <div class="auth__panel">
+        <div class="auth__head">
+          <div>
+            <h3>Create account</h3>
+            <p>Takes less than a minute.</p>
+          </div>
+          <p class="auth__switch">Already registered? <a href="signin.html">Sign in</a></p>
+        </div>
+
+        <div class="auth__social">
+          <button type="button" class="btn-auth-social" data-social="Google"><i class="bi bi-google"></i> Google</button>
+          <button type="button" class="btn-auth-social" data-social="Apple"><i class="bi bi-apple"></i> Apple</button>
+        </div>
+        <div class="auth__divider"><span>or sign up with email</span></div>
+
+        <form data-auth="signup" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="field">
+                <label for="suName">Full name</label>
+                <div class="field__box">
+                  <i class="bi bi-person"></i>
+                  <input type="text" class="form-control" id="suName" name="name" placeholder="John Carter" required autocomplete="name">
+                </div>
+                <div class="invalid-feedback">Please tell us your name.</div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="field">
+                <label for="suPhone">Phone number</label>
+                <div class="field__box">
+                  <i class="bi bi-telephone"></i>
+                  <input type="tel" class="form-control" id="suPhone" placeholder="+1 555 000 1234" required autocomplete="tel">
+                </div>
+                <div class="invalid-feedback">Please enter your phone number.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="suEmail">Email address</label>
+            <div class="field__box">
+              <i class="bi bi-envelope"></i>
+              <input type="email" class="form-control" id="suEmail" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="suPass">Password</label>
+            <div class="field__box">
+              <i class="bi bi-lock"></i>
+              <input type="password" class="form-control" id="suPass" placeholder="At least 8 characters" required minlength="8" autocomplete="new-password">
+              <button type="button" class="field__eye" data-toggle-pass="suPass" aria-label="Show password"><i class="bi bi-eye"></i></button>
+            </div>
+            <div class="strength" id="passStrength" data-level="0" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <small class="strength-label" id="passStrengthLabel">Password strength</small>
+            <div class="invalid-feedback">Use at least 8 characters.</div>
+          </div>
+
+          <div class="field">
+            <label for="suPass2">Confirm password</label>
+            <div class="field__box">
+              <i class="bi bi-lock-fill"></i>
+              <input type="password" class="form-control" id="suPass2" placeholder="Repeat your password" required minlength="8" data-match="suPass" autocomplete="new-password">
+              <button type="button" class="field__eye" data-toggle-pass="suPass2" aria-label="Show password"><i class="bi bi-eye"></i></button>
+            </div>
+            <div class="invalid-feedback">Passwords don't match.</div>
+          </div>
+
+          <div class="field">
+            <label class="auth__check"><input type="checkbox" id="suTerms" required> <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span></label>
+            <div class="invalid-feedback">Please accept the terms to continue.</div>
+          </div>
+
+          <button type="submit" class="btn btn-brand w-100 auth__submit">Create Account <i class="bi bi-arrow-right ms-2"></i></button>
+        </form>
+
+        <p class="auth__note">Your data is encrypted and never shared with third parties.</p>
+      </div>
+
+    </div>
+  </div>
+</section>

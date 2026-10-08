@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Update your personal details, security settings and notification preferences.">
+<title>Profile & Settings | Lumina Dental Patient Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+  <div class="sidebar__head">
+    <a class="sidebar__brand" href="dashboard.html">
+      <span class="brand-mark"><i class="bi bi-stars"></i></span>
+      <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+    </a>
+    <button class="sidebar__close" id="sidebarClose" type="button" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+  </div>
+
+  <nav class="sidebar__nav">
+    <span class="sidebar__label">Menu</span>
+    <a class="side-link " href="dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a>
+    <a class="side-link " href="appointments.html"><i class="bi bi-calendar2-week-fill"></i><span>Appointments</span><em class="side-link__badge">2</em></a>
+    <a class="side-link " href="treatments.html"><i class="bi bi-clipboard2-pulse-fill"></i><span>Treatments &amp; Records</span></a>
+    <a class="side-link " href="invoices.html"><i class="bi bi-receipt-cutoff"></i><span>Invoices</span></a>
+
+    <span class="sidebar__label">Account</span>
+    <a class="side-link active" href="profile.html"><i class="bi bi-person-gear"></i><span>Profile &amp; Settings</span></a>
+    <a class="side-link" href="appointment.html"><i class="bi bi-plus-circle-fill"></i><span>Book a visit</span></a>
+  </nav>
+
+  <div class="sidebar__foot">
+    <div class="sidebar__help">
+      <i class="bi bi-headset"></i>
+      <div><strong>Need help?</strong><span>+1 800 555 0199</span></div>
+    </div>
+    <a class="side-link side-link--ghost" href="index.html"><i class="bi bi-box-arrow-left"></i><span>Back to website</span></a>
+    <button class="side-link side-link--ghost" id="signOutBtn" type="button"><i class="bi bi-power"></i><span>Sign out</span></button>
+  </div>
+</aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ============ APP CONTENT ============ -->
+<div class="app__content">
+
+  <header class="topbar-app">
+    <button class="topbar-app__burger" id="sidebarOpen" type="button" aria-label="Open menu"><i class="bi bi-list"></i></button>
+
+    <div class="topbar-app__title">
+      <h6>Profile & Settings</h6>
+      <small>Lumina Dental â€” Patient Portal</small>
+    </div>
+
+    <div class="topbar-app__right">
+      <div class="topbar-app__search">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Search records, invoicesâ€¦" aria-label="Search portal">
+      </div>
+
+      <div class="dropdown">
+        <button class="topbar-app__icon" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+          <i class="bi bi-bell"></i><span class="dot"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end notif-menu">
+          <li><h6 class="dropdown-header">Notifications</h6></li>
+          <li>
+            <a class="dropdown-item notif-item" href="appointments.html">
+              <i class="bi bi-calendar-check"></i>
+              <span><strong>Appointment confirmed</strong><small>Dr. Reyes â€” Tue, 15 Oct, 10:30</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item notif-item" href="invoices.html">
+              <i class="bi bi-receipt"></i>
+              <span><strong>New invoice available</strong><small>INV-2026-031 â€” $140.00 due</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item notif-item" href="treatments.html">
+              <i class="bi bi-file-earmark-x"></i>
+              <span><strong>Your X-ray is ready</strong><small>Bitewing scan â€” 2 Oct 2026</small></span>
+            </a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-center small" href="appointments.html">View all activity</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="user-chip" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="">
+          <span><strong data-user-name>John Carter</strong><small data-user-email>john.carter@email.com</small></span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>My profile</a></li>
+          <li><a class="dropdown-item" href="invoices.html"><i class="bi bi-receipt me-2"></i>Billing &amp; invoices</a></li>
+          <li><a class="dropdown-item" href="profile.html#security"><i class="bi bi-shield-lock me-2"></i>Security</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><button class="dropdown-item text-danger" id="userSignOut" type="button"><i class="bi bi-power me-2"></i>Sign out</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="app__main">
+
+
+<!-- ============ DASH CONTENT ============ -->
+
+<!-- ============ DASH HEAD ============ -->
+<div class="dash-head" data-reveal="up">
+  <div>
+    <span class="eyebrow">Your account</span>
+    <h1 class="dash-head__title">Profile &amp; Settings</h1>
+    <p>Keep your details current so every visit check-in takes seconds.</p>
+  </div>
+  <div class="dash-head__actions">
+    <button class="btn btn-brand rounded-pill px-4" type="submit" form="profileForm"><i class="bi bi-check2 me-1"></i> Save changes</button>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- MAIN PROFILE -->
+  <div class="col-lg-8">
+    <div class="card-app mb-4" data-reveal="up">
+      <div class="card-app__head">
+        <h5><i class="bi bi-person-vcard me-2 text-brand"></i>Personal information</h5>
+        <span class="badge-soft b-confirmed">Verified</span>
+      </div>
+
+      <div class="profile-top mb-4">
+        <div class="profile-top__avatar">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Profile photo">
+          <button type="button" aria-label="Change photo"><i class="bi bi-camera-fill"></i></button>
+        </div>
+        <div>
+          <h5 class="mb-1" data-user-name>John Carter</h5>
+          <p class="text-muted mb-2 small">Patient ID <strong>PT-10482</strong> Â· Member since Mar 2026</p>
+          <span class="badge-soft b-pending">Gold Smile Plan</span>
+        </div>
+      </div>
+
+      <form id="profileForm" data-auth="profile" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfName">Full name</label>
+              <div class="field__box"><i class="bi bi-person"></i>
+                <input type="text" class="form-control" id="pfName" name="name" value="John Carter" required autocomplete="name">
+              </div>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfEmail">Email address</label>
+              <div class="field__box"><i class="bi bi-envelope"></i>
+                <input type="email" class="form-control" id="pfEmail" value="john.carter@email.com" required autocomplete="email">
+              </div>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfPhone">Phone number</label>
+              <div class="field__box"><i class="bi bi-telephone"></i>
+                <input type="tel" class="form-control" id="pfPhone" value="+1 555 014 7788" required autocomplete="tel">
+              </div>
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfDob">Date of birth</label>
+              <div class="field__box"><i class="bi bi-calendar3"></i>
+                <input type="date" class="form-control" id="pfDob" value="1992-04-18" required>
+              </div>
+              <div class="invalid-feedback">Please choose your date of birth.</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="field">
+              <label for="pfAddr">Home address</label>
+              <div class="field__box"><i class="bi bi-geo-alt"></i>
+                <input type="text" class="form-control" id="pfAddr" value="88 Willow Street, Brooklyn, NY 11201" autocomplete="street-address">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfIns">Insurance provider</label>
+              <div class="field__box"><i class="bi bi-shield-lock"></i>
+                <input type="text" class="form-control" id="pfIns" value="DeltaDental PPO">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="pfEmergency">Emergency contact</label>
+              <div class="field__box"><i class="bi bi-people"></i>
+                <input type="tel" class="form-control" id="pfEmergency" value="+1 555 014 9911">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-brand rounded-pill px-4 mt-2">Save changes</button>
+      </form>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="card-app" id="security" data-reveal="up">
+      <div class="card-app__head">
+        <h5><i class="bi bi-shield-lock me-2 text-brand"></i>Security</h5>
+        <span class="badge-soft b-completed">2FA on</span>
+      </div>
+
+      <form data-auth="password" novalidate>
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="field">
+              <label for="spCurrent">Current password</label>
+              <div class="field__box"><i class="bi bi-lock"></i>
+                <input type="password" class="form-control" id="spCurrent" placeholder="Enter current password" required minlength="8" autocomplete="current-password">
+                <button type="button" class="field__eye" data-toggle-pass="spCurrent" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Enter your current password (min 8 characters).</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="spNew">New password</label>
+              <div class="field__box"><i class="bi bi-key"></i>
+                <input type="password" class="form-control" id="spNew" placeholder="At least 8 characters" required minlength="8" autocomplete="new-password">
+                <button type="button" class="field__eye" data-toggle-pass="spNew" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Use at least 8 characters.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="field">
+              <label for="spNew2">Confirm new password</label>
+              <div class="field__box"><i class="bi bi-key-fill"></i>
+                <input type="password" class="form-control" id="spNew2" placeholder="Repeat new password" required minlength="8" data-match="spNew" autocomplete="new-password">
+                <button type="button" class="field__eye" data-toggle-pass="spNew2" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="invalid-feedback">Passwords don't match.</div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button type="submit" class="btn btn-brand rounded-pill px-4">Update password</button>
+          <button class="btn btn-light rounded-pill px-4 border" type="button"><i class="bi bi-phone me-1"></i> Reset 2FA device</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SIDE SETTINGS -->
+  <div class="col-lg-4">
+    <div class="card-app mb-4" data-reveal="right">
+      <div class="card-app__head"><h5>Notifications</h5></div>
+      <div class="switch-row">
+        <div><strong>Appointment reminders</strong><span>Email + SMS, 24h before</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Appointment reminders"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Invoice alerts</strong><span>When a new invoice is issued</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" checked aria-label="Invoice alerts"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Oral-care tips</strong><span>Monthly newsletter from our dentists</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" aria-label="Oral-care tips"></div>
+      </div>
+      <div class="switch-row">
+        <div><strong>Promotions</strong><span>Member-only offers on whitening</span></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" aria-label="Promotions"></div>
+      </div>
+    </div>
+
+    <div class="card-app mb-4" data-reveal="right">
+      <div class="card-app__head"><h5>Preferences</h5></div>
+      <div class="field mb-3">
+        <label for="pfLang">Preferred language</label>
+        <div class="field__box"><i class="bi bi-translate"></i>
+          <select class="form-control form-select" id="pfLang">
+            <option selected>English</option>
+            <option>EspaÃ±ol</option>
+            <option>FranÃ§ais</option>
+            <option>Deutsch</option>
+          </select>
+        </div>
+      </div>
+      <div class="field mb-0">
+        <label for="pfClinic">Preferred clinic</label>
+        <div class="field__box"><i class="bi bi-building"></i>
+          <select class="form-control form-select" id="pfClinic">
+            <option selected>Riverside Avenue (HQ)</option>
+            <option>Brooklyn Heights</option>
+            <option>Queens Plaza</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" data-reveal="right">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      <div>
+        <strong>Sign out everywhere</strong>
+        <p class="mb-2">Ends all sessions on other devices.</p>
+        <button class="btn btn-sm btn-light border rounded-pill px-3" type="button" id="signOutAll">Sign out all sessions</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="app__footer">
+    <p class="mb-0">Â© 2026 Lumina Dental Care â€” Patient Portal</p>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="faq.html">Help Center</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</div><!-- /.app__content -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

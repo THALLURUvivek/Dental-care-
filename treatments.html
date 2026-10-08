@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your treatment timeline, X-rays, prescriptions and clinical documents in one place.">
+<title>Treatments & Records | Lumina Dental Patient Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+  <div class="sidebar__head">
+    <a class="sidebar__brand" href="dashboard.html">
+      <span class="brand-mark"><i class="bi bi-stars"></i></span>
+      <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+    </a>
+    <button class="sidebar__close" id="sidebarClose" type="button" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+  </div>
+
+  <nav class="sidebar__nav">
+    <span class="sidebar__label">Menu</span>
+    <a class="side-link " href="dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a>
+    <a class="side-link " href="appointments.html"><i class="bi bi-calendar2-week-fill"></i><span>Appointments</span><em class="side-link__badge">2</em></a>
+    <a class="side-link active" href="treatments.html"><i class="bi bi-clipboard2-pulse-fill"></i><span>Treatments &amp; Records</span></a>
+    <a class="side-link " href="invoices.html"><i class="bi bi-receipt-cutoff"></i><span>Invoices</span></a>
+
+    <span class="sidebar__label">Account</span>
+    <a class="side-link " href="profile.html"><i class="bi bi-person-gear"></i><span>Profile &amp; Settings</span></a>
+    <a class="side-link" href="appointment.html"><i class="bi bi-plus-circle-fill"></i><span>Book a visit</span></a>
+  </nav>
+
+  <div class="sidebar__foot">
+    <div class="sidebar__help">
+      <i class="bi bi-headset"></i>
+      <div><strong>Need help?</strong><span>+1 800 555 0199</span></div>
+    </div>
+    <a class="side-link side-link--ghost" href="index.html"><i class="bi bi-box-arrow-left"></i><span>Back to website</span></a>
+    <button class="side-link side-link--ghost" id="signOutBtn" type="button"><i class="bi bi-power"></i><span>Sign out</span></button>
+  </div>
+</aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ============ APP CONTENT ============ -->
+<div class="app__content">
+
+  <header class="topbar-app">
+    <button class="topbar-app__burger" id="sidebarOpen" type="button" aria-label="Open menu"><i class="bi bi-list"></i></button>
+
+    <div class="topbar-app__title">
+      <h6>Treatments & Records</h6>
+      <small>Lumina Dental â€” Patient Portal</small>
+    </div>
+
+    <div class="topbar-app__right">
+      <div class="topbar-app__search">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Search records, invoicesâ€¦" aria-label="Search portal">
+      </div>
+
+      <div class="dropdown">
+        <button class="topbar-app__icon" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+          <i class="bi bi-bell"></i><span class="dot"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end notif-menu">
+          <li><h6 class="dropdown-header">Notifications</h6></li>
+          <li>
+            <a class="dropdown-item notif-item" href="appointments.html">
+              <i class="bi bi-calendar-check"></i>
+              <span><strong>Appointment confirmed</strong><small>Dr. Reyes â€” Tue, 15 Oct, 10:30</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item notif-item" href="invoices.html">
+              <i class="bi bi-receipt"></i>
+              <span><strong>New invoice available</strong><small>INV-2026-031 â€” $140.00 due</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item notif-item" href="treatments.html">
+              <i class="bi bi-file-earmark-x"></i>
+              <span><strong>Your X-ray is ready</strong><small>Bitewing scan â€” 2 Oct 2026</small></span>
+            </a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-center small" href="appointments.html">View all activity</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="user-chip" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="">
+          <span><strong data-user-name>John Carter</strong><small data-user-email>john.carter@email.com</small></span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>My profile</a></li>
+          <li><a class="dropdown-item" href="invoices.html"><i class="bi bi-receipt me-2"></i>Billing &amp; invoices</a></li>
+          <li><a class="dropdown-item" href="profile.html#security"><i class="bi bi-shield-lock me-2"></i>Security</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><button class="dropdown-item text-danger" id="userSignOut" type="button"><i class="bi bi-power me-2"></i>Sign out</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="app__main">
+
+
+<!-- ============ DASH CONTENT ============ -->
+
+<!-- ============ DASH HEAD ============ -->
+<div class="dash-head" data-reveal="up">
+  <div>
+    <span class="eyebrow">Clinical history</span>
+    <h1 class="dash-head__title">Treatments &amp; Records</h1>
+    <p>Every procedure, prescription and scan â€” organized in one timeline.</p>
+  </div>
+  <div class="dash-head__actions">
+    <a href="appointment.html" class="btn btn-brand rounded-pill px-4"><i class="bi bi-plus-lg me-1"></i> Book appointment</a>
+  </div>
+</div>
+
+<div class="row g-4 mb-4">
+  <div class="col-sm-6 col-xl-3">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-teal"><i class="bi bi-clipboard2-pulse-fill"></i></span>
+      <div><strong class="stat-card__val counter" data-count="14">0</strong><span class="stat-card__label">Treatments logged</span></div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-blue"><i class="bi bi-image-fill"></i></span>
+      <div><strong class="stat-card__val counter" data-count="9">0</strong><span class="stat-card__label">X-rays &amp; scans</span></div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-gold"><i class="bi bi-capsule-pill"></i></span>
+      <div><strong class="stat-card__val counter" data-count="3">0</strong><span class="stat-card__label">Active prescriptions</span></div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-xl-3">
+    <div class="stat-card" data-reveal="up">
+      <span class="stat-card__icon tone-red"><i class="bi bi-exclamation-diamond-fill"></i></span>
+      <div><strong class="stat-card__val counter" data-count="1">0</strong><span class="stat-card__label">Allergy noted</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- TREATMENT TIMELINE -->
+  <div class="col-lg-7">
+    <div class="card-app mb-4" data-reveal="up">
+      <div class="card-app__head">
+        <h5><i class="bi bi-clock-history me-2 text-brand"></i>Treatment timeline</h5>
+        <a href="#">Export PDF</a>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="badge-soft b-completed mb-2">Restorative</span>
+          <h6>Composite filling â€” tooth 26</h6>
+          <p>White filling placed on the upper-left premolar. Local anaesthesia, no complications. Polish at next cleaning.</p>
+          <time>2 Oct 2026 Â· Dr. Sofia Reyes</time>
+        </div>
+        <div class="timeline__item is-gold">
+          <span class="badge-soft b-pending mb-2">In progress</span>
+          <h6>InvisalignÂ® Lite â€” tray 7 of 14</h6>
+          <p>Tracking 2 weeks ahead of plan. Next scan scheduled for the 2 Nov review.</p>
+          <time>Started 12 Jun 2026 Â· Dr. Amir Khan</time>
+        </div>
+        <div class="timeline__item">
+          <span class="badge-soft b-completed mb-2">Preventive</span>
+          <h6>Deep cleaning &amp; fluoride varnish</h6>
+          <p>Full-mouth scaling (SRP) with fluoride application. Home-care plan provided.</p>
+          <time>18 Aug 2026 Â· Dr. Marcus Webb</time>
+        </div>
+        <div class="timeline__item">
+          <span class="badge-soft b-completed mb-2">Cosmetic</span>
+          <h6>Whitening session #1</h6>
+          <p>In-office LED whitening, shade improved from A3 to A1. Session #2 booked for 19 Nov.</p>
+          <time>21 Jun 2026 Â· Dr. Lena Fischer</time>
+        </div>
+        <div class="timeline__item">
+          <span class="badge-soft b-completed mb-2">Diagnostic</span>
+          <h6>Full-mouth series X-rays</h6>
+          <p>18 images â€” no bone loss detected, two early interproximal lesions monitored.</p>
+          <time>4 Mar 2026 Â· Dr. Sofia Reyes</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOCUMENTS + RX -->
+  <div class="col-lg-5">
+    <div class="card-app mb-4" data-reveal="right">
+      <div class="card-app__head">
+        <h5><i class="bi bi-folder2-open me-2 text-brand"></i>Documents &amp; scans</h5>
+        <a href="#">Upload</a>
+      </div>
+      <div class="docs-list">
+        <a class="doc-card" href="#">
+          <i class="bi bi-file-earmark-xlsx"></i>
+          <span><strong>Bitewing X-ray â€” right</strong><small>2 Oct 2026 Â· 1.8 MB Â· JPG</small></span>
+          <i class="bi bi-download ms-auto"></i>
+        </a>
+        <a class="doc-card" href="#">
+          <i class="bi bi-file-earmark-xlsx"></i>
+          <span><strong>Bitewing X-ray â€” left</strong><small>2 Oct 2026 Â· 1.7 MB Â· JPG</small></span>
+          <i class="bi bi-download ms-auto"></i>
+        </a>
+        <a class="doc-card" href="#">
+          <i class="bi bi-file-earmark-text"></i>
+          <span><strong>Treatment plan â€” Aligners</strong><small>12 Jun 2026 Â· 240 KB Â· PDF</small></span>
+          <i class="bi bi-download ms-auto"></i>
+        </a>
+        <a class="doc-card" href="#">
+          <i class="bi bi-file-earmark-text"></i>
+          <span><strong>Insurance pre-approval</strong><small>4 Mar 2026 Â· 118 KB Â· PDF</small></span>
+          <i class="bi bi-download ms-auto"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="card-app mb-4" data-reveal="right">
+      <div class="card-app__head"><h5><i class="bi bi-capsule-pill me-2 text-brand"></i>Prescriptions</h5></div>
+      <ul class="rx-list">
+        <li>
+          <span class="rx-list__dot"></span>
+          <div><strong>Fluoride rinse 0.05%</strong><small>Twice daily after brushing Â· 500 ml</small></div>
+          <em class="badge-soft b-confirmed">Active</em>
+        </li>
+        <li>
+          <span class="rx-list__dot"></span>
+          <div><strong>Chlorhexidine 0.12%</strong><small>10 ml rinses, 7-day course Â· post-op</small></div>
+          <em class="badge-soft b-completed">Finished</em>
+        </li>
+        <li>
+          <span class="rx-list__dot"></span>
+          <div><strong>Ibuprofen 400 mg</strong><small>As needed Â· max 3 per day</small></div>
+          <em class="badge-soft b-confirmed">Active</em>
+        </li>
+      </ul>
+    </div>
+
+    <div class="note-box" data-reveal="right">
+      <i class="bi bi-heart-pulse-fill"></i>
+      <div>
+        <strong>Allergy on file</strong>
+        <p class="mb-0">Penicillin â€” always confirm with your dentist before new prescriptions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="app__footer">
+    <p class="mb-0">Â© 2026 Lumina Dental Care â€” Patient Portal</p>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="faq.html">Help Center</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</div><!-- /.app__content -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

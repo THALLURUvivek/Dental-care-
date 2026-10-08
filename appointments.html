@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Track upcoming and past dental appointments â€” reschedule or cancel in seconds.">
+<title>My Appointments | Lumina Dental Patient Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+  <div class="sidebar__head">
+    <a class="sidebar__brand" href="dashboard.html">
+      <span class="brand-mark"><i class="bi bi-stars"></i></span>
+      <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+    </a>
+    <button class="sidebar__close" id="sidebarClose" type="button" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+  </div>
+
+  <nav class="sidebar__nav">
+    <span class="sidebar__label">Menu</span>
+    <a class="side-link " href="dashboard.html"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a>
+    <a class="side-link active" href="appointments.html"><i class="bi bi-calendar2-week-fill"></i><span>Appointments</span><em class="side-link__badge">2</em></a>
+    <a class="side-link " href="treatments.html"><i class="bi bi-clipboard2-pulse-fill"></i><span>Treatments &amp; Records</span></a>
+    <a class="side-link " href="invoices.html"><i class="bi bi-receipt-cutoff"></i><span>Invoices</span></a>
+
+    <span class="sidebar__label">Account</span>
+    <a class="side-link " href="profile.html"><i class="bi bi-person-gear"></i><span>Profile &amp; Settings</span></a>
+    <a class="side-link" href="appointment.html"><i class="bi bi-plus-circle-fill"></i><span>Book a visit</span></a>
+  </nav>
+
+  <div class="sidebar__foot">
+    <div class="sidebar__help">
+      <i class="bi bi-headset"></i>
+      <div><strong>Need help?</strong><span>+1 800 555 0199</span></div>
+    </div>
+    <a class="side-link side-link--ghost" href="index.html"><i class="bi bi-box-arrow-left"></i><span>Back to website</span></a>
+    <button class="side-link side-link--ghost" id="signOutBtn" type="button"><i class="bi bi-power"></i><span>Sign out</span></button>
+  </div>
+</aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ============ APP CONTENT ============ -->
+<div class="app__content">
+
+  <header class="topbar-app">
+    <button class="topbar-app__burger" id="sidebarOpen" type="button" aria-label="Open menu"><i class="bi bi-list"></i></button>
+
+    <div class="topbar-app__title">
+      <h6>Appointments</h6>
+      <small>Lumina Dental â€” Patient Portal</small>
+    </div>
+
+    <div class="topbar-app__right">
+      <div class="topbar-app__search">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Search records, invoicesâ€¦" aria-label="Search portal">
+      </div>
+
+      <div class="dropdown">
+        <button class="topbar-app__icon" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+          <i class="bi bi-bell"></i><span class="dot"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end notif-menu">
+          <li><h6 class="dropdown-header">Notifications</h6></li>
+          <li>
+            <a class="dropdown-item notif-item" href="appointments.html">
+              <i class="bi bi-calendar-check"></i>
+              <span><strong>Appointment confirmed</strong><small>Dr. Reyes â€” Tue, 15 Oct, 10:30</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item notif-item" href="invoices.html">
+              <i class="bi bi-receipt"></i>
+              <span><strong>New invoice available</strong><small>INV-2026-031 â€” $140.00 due</small></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item notif-item" href="treatments.html">
+              <i class="bi bi-file-earmark-x"></i>
+              <span><strong>Your X-ray is ready</strong><small>Bitewing scan â€” 2 Oct 2026</small></span>
+            </a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-center small" href="appointments.html">View all activity</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="user-chip" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="">
+          <span><strong data-user-name>John Carter</strong><small data-user-email>john.carter@email.com</small></span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>My profile</a></li>
+          <li><a class="dropdown-item" href="invoices.html"><i class="bi bi-receipt me-2"></i>Billing &amp; invoices</a></li>
+          <li><a class="dropdown-item" href="profile.html#security"><i class="bi bi-shield-lock me-2"></i>Security</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><button class="dropdown-item text-danger" id="userSignOut" type="button"><i class="bi bi-power me-2"></i>Sign out</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="app__main">
+
+
+<!-- ============ DASH CONTENT ============ -->
+
+<!-- ============ DASH HEAD ============ -->
+<div class="dash-head" data-reveal="up">
+  <div>
+    <span class="eyebrow">Your schedule</span>
+    <h1 class="dash-head__title">Appointments</h1>
+    <p>Track upcoming visits and review your past ones â€” reschedule anytime.</p>
+  </div>
+  <div class="dash-head__actions">
+    <a href="appointment.html" class="btn btn-brand rounded-pill px-4"><i class="bi bi-plus-lg me-1"></i> Book new appointment</a>
+  </div>
+</div>
+
+<!-- ============ FILTERS ============ -->
+<div class="pill-tabs mb-4" role="tablist" data-reveal="up">
+  <button class="pill-tabs__btn active" type="button" data-filter="all">All <span>6</span></button>
+  <button class="pill-tabs__btn" type="button" data-filter="upcoming">Upcoming <span>3</span></button>
+  <button class="pill-tabs__btn" type="button" data-filter="completed">Completed <span>2</span></button>
+  <button class="pill-tabs__btn" type="button" data-filter="cancelled">Cancelled <span>1</span></button>
+</div>
+
+<!-- ============ APPOINTMENT LIST ============ -->
+<div class="card-app" data-reveal="up">
+  <div class="table-responsive">
+    <table class="table table-app align-middle">
+      <thead>
+        <tr>
+          <th>Date &amp; time</th>
+          <th>Treatment</th>
+          <th>Dentist</th>
+          <th>Room</th>
+          <th>Status</th>
+          <th class="text-end">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-status-row="upcoming">
+          <td><strong>15 Oct 2026</strong><br><small class="text-muted">10:30 â€“ 11:15</small></td>
+          <td>Routine cleaning &amp; check-up</td>
+          <td>Dr. Sofia Reyes</td>
+          <td>Floor 2, Room 4</td>
+          <td><span class="badge-soft b-confirmed">Confirmed</span></td>
+          <td class="text-end">
+            <a class="btn btn-xs btn-light border" href="appointment.html">Reschedule</a>
+            <button class="btn btn-xs btn-light border text-danger" type="button">Cancel</button>
+          </td>
+        </tr>
+        <tr data-status-row="upcoming">
+          <td><strong>02 Nov 2026</strong><br><small class="text-muted">15:00 â€“ 16:00</small></td>
+          <td>Aligner progress review</td>
+          <td>Dr. Amir Khan</td>
+          <td>Floor 1, Room 1</td>
+          <td><span class="badge-soft b-pending">Pending</span></td>
+          <td class="text-end">
+            <a class="btn btn-xs btn-light border" href="appointment.html">Reschedule</a>
+            <button class="btn btn-xs btn-light border text-danger" type="button">Cancel</button>
+          </td>
+        </tr>
+        <tr data-status-row="upcoming">
+          <td><strong>19 Nov 2026</strong><br><small class="text-muted">09:00 â€“ 09:45</small></td>
+          <td>Whitening session #2</td>
+          <td>Dr. Lena Fischer</td>
+          <td>Floor 3, Studio</td>
+          <td><span class="badge-soft b-confirmed">Confirmed</span></td>
+          <td class="text-end">
+            <a class="btn btn-xs btn-light border" href="appointment.html">Reschedule</a>
+            <button class="btn btn-xs btn-light border text-danger" type="button">Cancel</button>
+          </td>
+        </tr>
+        <tr data-status-row="completed">
+          <td><strong>02 Oct 2026</strong><br><small class="text-muted">11:00 â€“ 12:00</small></td>
+          <td>Composite filling â€” tooth 26</td>
+          <td>Dr. Sofia Reyes</td>
+          <td>Floor 2, Room 3</td>
+          <td><span class="badge-soft b-completed">Completed</span></td>
+          <td class="text-end"><a class="btn btn-xs btn-light border" href="treatments.html">Records</a></td>
+        </tr>
+        <tr data-status-row="completed">
+          <td><strong>18 Aug 2026</strong><br><small class="text-muted">14:00 â€“ 14:40</small></td>
+          <td>Deep cleaning &amp; fluoride</td>
+          <td>Dr. Marcus Webb</td>
+          <td>Floor 2, Room 4</td>
+          <td><span class="badge-soft b-completed">Completed</span></td>
+          <td class="text-end"><a class="btn btn-xs btn-light border" href="treatments.html">Records</a></td>
+        </tr>
+        <tr data-status-row="cancelled">
+          <td><strong>21 Jul 2026</strong><br><small class="text-muted">18:00 â€“ 18:30</small></td>
+          <td>Teeth whitening consult</td>
+          <td>Dr. Lena Fischer</td>
+          <td>Floor 3, Studio</td>
+          <td><span class="badge-soft b-cancelled">Cancelled</span></td>
+          <td class="text-end"><a class="btn btn-xs btn-light border" href="appointment.html">Rebook</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 pt-3 border-top">
+    <small class="text-muted">Showing 6 of 6 appointments</small>
+    <div class="d-flex gap-2">
+      <button class="btn btn-xs btn-light border" type="button" disabled>Previous</button>
+      <button class="btn btn-xs btn-light border" type="button" disabled>Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TIPS ============ -->
+<div class="row g-4 mt-1">
+  <div class="col-md-6">
+    <div class="info-card h-100" data-reveal="left">
+      <span class="info-card__icon"><i class="bi bi-arrow-repeat"></i></span>
+      <h5>Need a different time?</h5>
+      <p>Reschedule up to 6 hours before your visit without any fee â€” slots refresh every morning at 07:00.</p>
+      <a href="appointment.html">Open booking page <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="info-card h-100" data-reveal="right">
+      <span class="info-card__icon"><i class="bi bi-door-open-fill"></i></span>
+      <h5>First time at the clinic?</h5>
+      <p>Check-in kiosks are on Floor 1. Your insurance card and ID are already verified in your profile.</p>
+      <a href="profile.html">Review my details <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="app__footer">
+    <p class="mb-0">Â© 2026 Lumina Dental Care â€” Patient Portal</p>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="faq.html">Help Center</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</div><!-- /.app__content -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

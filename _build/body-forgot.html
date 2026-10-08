@@ -1,0 +1,45 @@
+<!-- ============ AUTH / FORGOT PASSWORD ============ -->
+<section class="auth">
+  <div class="container">
+    <div class="auth__shell auth__shell--single" data-reveal="scale">
+
+      <div class="auth__panel">
+        <a class="auth__logo" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+
+        <div class="auth__head">
+          <div>
+            <h3>Reset password</h3>
+            <p>We'll email you a secure link to set a new password.</p>
+          </div>
+        </div>
+
+        <div class="auth__alert d-none" id="authSuccess" role="status">
+          <i class="bi bi-check-circle-fill"></i>
+          <div>
+            <strong>Check your inbox</strong>
+            <p class="mb-0">If an account exists for that address, a reset link is on its way. The link expires in 30 minutes.</p>
+          </div>
+        </div>
+
+        <form data-auth="forgot" novalidate>
+          <div class="field">
+            <label for="fpEmail">Email address</label>
+            <div class="field__box">
+              <i class="bi bi-envelope"></i>
+              <input type="email" class="form-control" id="fpEmail" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <button type="submit" class="btn btn-brand w-100 auth__submit">Send Reset Link <i class="bi bi-send-fill ms-2"></i></button>
+        </form>
+
+        <p class="auth__note">Remembered it? <a href="signin.html">Back to sign in</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>

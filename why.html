@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pain-free technology, transparent pricing, specialist dentists and lifetime aftercare â€” the Lumina difference in writing.">
+<title>Why Choose Us | Lumina Dental Care</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+<style>
+  .preloader{display:none!important}
+  body.is-loading{overflow:auto!important}
+  [data-reveal]{opacity:1!important}
+</style>
+</noscript>
+</head>
+<body class="is-loading">
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__logo">
+      <span class="tooth-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+      <span class="brand-word"><img class="brand-logo" src="images/image.png" alt="Lumina Dental Care"></span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+    <p class="preloader__hint">Preparing your perfect smileâ€¦</p>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ PROGRESS BAR ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar d-none d-lg-block">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between py-2">
+      <div class="topbar__info d-flex gap-4">
+        <span><i class="bi bi-geo-alt-fill"></i> 214 Riverside Avenue, New York, NY</span>
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 555-0199</span>
+        <span><i class="bi bi-clock-fill"></i> Monâ€“Sat: 08:00 â€“ 20:00</span>
+      </div>
+      <div class="topbar__social d-flex align-items-center gap-3">
+        <span class="text-uppercase small">Follow us</span>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <span class="brand-mark"><i class="bi bi-stars"></i></span>
+      <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMenu" aria-controls="navMenu" aria-label="Toggle navigation">
+      <span class="toggler-box"><span></span><span></span><span></span></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end nav-offcanvas" tabindex="-1" id="navMenu" aria-labelledby="navMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-uppercase" id="navMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body align-items-lg-center">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="why.html">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link " href="team.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link " href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link " href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3 mt-4 mt-lg-0 ms-lg-4">
+          <a href="tel:+18005550199" class="nav-phone d-none d-lg-flex align-items-center gap-2">
+            <i class="bi bi-telephone-fill"></i>
+            <span><small class="d-block lh-1 text-uppercase">Call us now</small>+1 800 555 0199</span>
+          </a>
+          <a href="signin.html" class="btn btn-brand btn-sm px-4 rounded-pill nav-cta d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-person-fill"></i> Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============ PAGE CONTENT ============ -->
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="page-hero__grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="crumbs" data-hero="1">
+      <a href="index.html">Home</a> <span class="sep">/</span> <span class="current">Why Us</span>
+    </div>
+    <h1 class="page-hero__title" data-split>Why 12,000 patients chose Lumina</h1>
+    <p class="page-hero__lead" data-hero="2">Comfort, transparency and technology â€” the three things people tell us made the difference.</p>
+    <div class="page-hero__actions" data-hero="3">
+      <a href="appointment.html" class="btn btn-brand btn-lg rounded-pill px-4">Experience It Yourself <i class="bi bi-arrow-right ms-2"></i></a>
+      <a href="faq.html" class="btn btn-outline-dark btn-lg rounded-pill px-4">Read The FAQ</a>
+    </div>
+    <div class="strip-stats" data-hero="4">
+      <div><strong class="counter" data-count="99">0</strong><span>% Recommend</span></div>
+      <div><strong class="counter" data-count="4.9">0</strong><span>Star Average</span></div>
+      <div><strong class="counter" data-count="0">0</strong><span>Hidden Fees</span></div>
+      <div><strong class="counter" data-count="60">0</strong><span>Min Emergency</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ WHY + ACCORDION ============ -->
+<section class="section why">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="section-head text-lg-start" data-reveal="up">
+          <span class="eyebrow">The Difference</span>
+          <h2 class="section-title">Built on trust, driven by <span class="accent-text">technology</span></h2>
+          <p class="section-sub">Four commitments we put in writing â€” because promises without proof are just marketing.</p>
+        </div>
+
+        <div class="accordion custom-accordion mt-4" id="whyAccordion" data-reveal="up">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#whyOne">
+                <span class="acc-num">01</span> Pain-Free Technology
+              </button>
+            </h3>
+            <div id="whyOne" class="accordion-collapse collapse show" data-bs-parent="#whyAccordion">
+              <div class="accordion-body">Laser dentistry, computer-anesthetised injections and intraoral cameras mean less discomfort, fewer visits and zero guesswork.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyTwo">
+                <span class="acc-num">02</span> Transparent Pricing
+              </button>
+            </h3>
+            <div id="whyTwo" class="accordion-collapse collapse" data-bs-parent="#whyAccordion">
+              <div class="accordion-body">A written treatment plan with fixed costs before we begin. No surprises, no hidden fees â€” ever.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyThree">
+                <span class="acc-num">03</span> Specialist Team
+              </button>
+            </h3>
+            <div id="whyThree" class="accordion-collapse collapse" data-bs-parent="#whyAccordion">
+              <div class="accordion-body">Implantologists, endodontists, orthodontists and prosthodontists collaborating on your case under one roof.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyFour">
+                <span class="acc-num">04</span> Lifetime Aftercare
+              </button>
+            </h3>
+            <div id="whyFour" class="accordion-collapse collapse" data-bs-parent="#whyAccordion">
+              <div class="accordion-body">Free annual check-ups for active patients, plus a 10-year warranty on implants and crowns.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 order-lg-1">
+        <div class="why__visual">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80" alt="Happy patient at dental clinic" class="img-fluid why__img" loading="lazy" width="900" height="700" data-reveal="scale">
+          <div class="why__float glass-card" data-float="3">
+            <div class="why__float-icon"><i class="bi bi-truck"></i></div>
+            <div>
+              <strong>Free pickup &amp; drop</strong>
+              <span class="d-block small text-secondary">For surgery patients</span>
+            </div>
+          </div>
+          <div class="why__badge" data-float="4">
+            <i class="bi bi-stars"></i>
+            <span>Best Dental<br>Clinic 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-5 counters-band">
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center"><strong class="counter" data-count="12">0</strong><span>k+</span><p>Happy Patients</p></div>
+      </div>
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center"><strong class="counter" data-count="18">0</strong><span>+</span><p>Expert Dentists</p></div>
+      </div>
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center"><strong class="counter" data-count="46">0</strong><span>k</span><p>Treatments Done</p></div>
+      </div>
+      <div class="col-6 col-lg-3" data-reveal="up">
+        <div class="count-card text-center"><strong class="counter" data-count="99">0</strong><span>%</span><p>Would Recommend</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUARANTEES ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head text-center mx-auto" data-reveal="up">
+      <span class="eyebrow">Our Guarantees</span>
+      <h2 class="section-title">Promises we put <span class="accent-text">in writing</span></h2>
+      <p class="section-sub mx-auto">Every one of these applies automatically â€” you don't have to ask for them.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-cash-coin"></i></span>
+          <h4>Fixed Price Quote</h4>
+          <p>Your written quote is honoured for 90 days. The price you agree is the price you pay.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-clock-history"></i></span>
+          <h4>On-Time Appointments</h4>
+          <p>More than 10 minutes late? Your hygiene cleaning is on us. We respect your schedule.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-arrow-repeat"></i></span>
+          <h4>10-Year Warranty</h4>
+          <p>Implants, crowns and bridges are guaranteed for a decade with regular check-ups.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up">
+        <div class="value-card">
+          <span class="value-card__icon"><i class="bi bi-hand-thumbs-up"></i></span>
+          <h4>Not Happy? Redo It</h4>
+          <p>Not satisfied with a cosmetic result within 30 days? We'll revise it free of charge.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="section-head text-lg-start" data-reveal="up">
+          <span class="eyebrow">The Experience</span>
+          <h2 class="section-title">Designed to feel like a <span class="accent-text">spa, not a clinic</span></h2>
+          <p class="section-sub">From the moment you arrive, everything is engineered to lower your heart rate.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6" data-reveal="up">
+            <div class="feature-tile">
+              <span class="feature-tile__icon"><i class="bi bi-music-note-beamed"></i></span>
+              <div><h5>Sound Therapy</h5><p class="mb-0">Noise-cancelling headphones and your choice of playlist during treatment.</p></div>
+            </div>
+          </div>
+          <div class="col-sm-6" data-reveal="up">
+            <div class="feature-tile">
+              <span class="feature-tile__icon"><i class="bi bi-cup-hot"></i></span>
+              <div><h5>Warm Towel Lounge</h5><p class="mb-0">Espresso, herbal tea and a warm towel before and after every visit.</p></div>
+            </div>
+          </div>
+          <div class="col-sm-6" data-reveal="up">
+            <div class="feature-tile">
+              <span class="feature-tile__icon"><i class="bi bi-emoji-smile"></i></span>
+              <div><h5>Sedation Options</h5><p class="mb-0">From laughing gas to full IV sedation for long or anxious appointments.</p></div>
+            </div>
+          </div>
+          <div class="col-sm-6" data-reveal="up">
+            <div class="feature-tile">
+              <span class="feature-tile__icon"><i class="bi bi-phone"></i></span>
+              <div><h5>Direct Dentist Line</h5><p class="mb-0">Your treating dentist gives you a personal number for post-op questions.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about__visual">
+          <div class="about__img about__img--main" data-reveal="right">
+            <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=80" alt="Comfortable dental clinic interior" class="img-fluid w-100" loading="lazy" width="800" height="900">
+          </div>
+          <div class="about__img about__img--sub" data-reveal="left">
+            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80" alt="Dental treatment detail" class="img-fluid w-100" loading="lazy" width="600" height="500">
+          </div>
+          <div class="about__experience" data-reveal="up">
+            <strong class="counter" data-count="10">0</strong>
+            <span>Minute Max<br>Waiting Time</span>
+          </div>
+          <div class="about__dots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section section-alt" id="testimonials">
+  <div class="container">
+    <div class="section-head text-center mx-auto" data-reveal="up">
+      <span class="eyebrow">Patient Stories</span>
+      <h2 class="section-title">They came anxious. They left <span class="accent-text">smiling.</span></h2>
+    </div>
+
+    <div class="swiper testimonial-slider" data-reveal="up">
+      <div class="swiper-track" id="testimonialTrack">
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="quote-mark"><i class="bi bi-quote"></i></div>
+            <p>I avoided dentists for 12 years out of fear. The team here did my implant in under an hour â€” I genuinely felt nothing. Best decision I've ever made.</p>
+            <div class="testimonial-card__foot">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Daniel Cooper" loading="lazy" width="120" height="120">
+              <div><strong>Daniel Cooper</strong><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="quote-mark"><i class="bi bi-quote"></i></div>
+            <p>My veneers look completely natural â€” three friends asked if I'd been on holiday. The digital smile preview made me confident before we even started.</p>
+            <div class="testimonial-card__foot">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Priya Nair" loading="lazy" width="120" height="120">
+              <div><strong>Priya Nair</strong><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="quote-mark"><i class="bi bi-quote"></i></div>
+            <p>My 6-year-old actually asks when she can go back to the dentist. That sentence alone deserves five stars. Playful staff, zero tears, perfect check-up.</p>
+            <div class="testimonial-card__foot">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="Hannah Weiss" loading="lazy" width="120" height="120">
+              <div><strong>Hannah Weiss</strong><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="quote-mark"><i class="bi bi-quote"></i></div>
+            <p>Clear aligners corrected my bite in 7 months. Every visit started on time and the progress app kept me motivated. Truly a modern clinic.</p>
+            <div class="testimonial-card__foot">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="James Okafor" loading="lazy" width="120" height="120">
+              <div><strong>James Okafor</strong><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-nav d-flex align-items-center justify-content-center gap-3 mt-4">
+        <button class="slider-btn" id="sliderPrev" aria-label="Previous testimonial"><i class="bi bi-arrow-left"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="sliderNext" aria-label="Next testimonial"><i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="cta-band d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4" data-reveal="up">
+      <div>
+        <h2>See the difference at <span class="accent-text">your first visit</span></h2>
+        <p>Free consultation, free digital scan, written plan in your hand before you leave.</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3 position-relative">
+        <a href="appointment.html" class="btn btn-light btn-lg rounded-pill px-4">Book Appointment <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="pricing.html" class="btn btn-lg btn-outline-light rounded-pill px-4">View Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer pt-5">
+  <div class="container">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="index.html">
+          <span class="brand-mark"><i class="bi bi-stars"></i></span>
+          <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
+        </a>
+        <p class="text-white-50 mb-4">A modern dental studio where advanced technology meets genuine human care â€” because everyone deserves a smile they're proud of.</p>
+        <div class="footer__social d-flex gap-2">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer__title">Explore</h6>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why.html">Why Choose Us</a></li>
+          <li><a href="team.html">Our Doctors</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="signin.html">Patient Sign In</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer__title">Treatments</h6>
+        <ul class="footer__links">
+          <li><a href="services.html">Dental Implants</a></li>
+          <li><a href="services.html">Invisible Aligners</a></li>
+          <li><a href="services.html">Teeth Whitening</a></li>
+          <li><a href="services.html">Root Canal</a></li>
+          <li><a href="services.html">Kids Dentistry</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer__title">Newsletter</h6>
+        <p class="text-white-50 small">Oral-care tips and exclusive offers, once a month. No spam.</p>
+        <form class="footer__news d-flex gap-2 mb-3" id="newsForm">
+          <input type="email" class="form-control rounded-pill" placeholder="Your email address" required aria-label="Email address">
+          <button class="btn btn-brand rounded-pill px-4" type="submit"><i class="bi bi-send-fill"></i></button>
+        </form>
+        <div class="footer__hours small text-white-50">
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Mon â€“ Fri</span><strong class="text-white">08:00 â€“ 20:00</strong></div>
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Saturday</span><strong class="text-white">09:00 â€“ 17:00</strong></div>
+          <div class="d-flex justify-content-between py-2"><span>Sunday</span><strong class="text-white">Emergency only</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom d-flex flex-wrap justify-content-between align-items-center gap-2 py-3">
+      <p class="mb-0 small text-white-50">Â© 2026 Lumina Dental Care. All rights reserved.</p>
+      <div class="d-flex gap-3 small">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
