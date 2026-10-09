@@ -1,4 +1,4 @@
-<!-- ============ PAGE HERO ============ -->
+﻿<!-- ============ PAGE HERO ============ -->
 <header class="page-hero">
   <div class="page-hero__grid" aria-hidden="true"></div>
   <div class="container">
@@ -6,7 +6,7 @@
       <a href="index.html">Home</a> <span class="sep">/</span> <span class="current">Book Appointment</span>
     </div>
     <h1 class="page-hero__title" data-split>Book your visit in under a minute</h1>
-    <p class="page-hero__lead" data-hero="2">Tell us what you need and when suits you — our coordinator calls back within 15 minutes to confirm.</p>
+    <p class="page-hero__lead" data-hero="2">Tell us what you need and when suits you "” our coordinator calls back within 15 minutes to confirm.</p>
     <div class="strip-stats" data-hero="3">
       <div><strong class="counter" data-count="15">0</strong><span>Min Callback</span></div>
       <div><strong class="counter" data-count="20">0</strong><span>% Same-Day Slots</span></div>
@@ -89,13 +89,20 @@
                 <label class="form-label" for="message">Anything we should know?</label>
                 <textarea class="form-control" id="message" rows="3" placeholder="Dental anxiety, preferred language, current medications…"></textarea>
               </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="apptTerms" required>
+                  <label class="form-check-label" for="apptTerms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+                  <div class="invalid-feedback">Please accept the terms to continue.</div>
+                </div>
+              </div>
               <div class="col-12 d-flex flex-wrap align-items-center gap-3">
                 <button type="submit" class="btn btn-brand btn-lg rounded-pill px-5">Confirm Booking <i class="bi bi-arrow-right ms-2"></i></button>
                 <small class="text-secondary"><i class="bi bi-lock-fill me-1"></i> Your data stays 100% private.</small>
               </div>
               <div class="col-12">
                 <div class="form-success d-none" id="formSuccess">
-                  <i class="bi bi-check-circle-fill"></i> Thank you! Your request has been received — we'll call you shortly.
+                  <i class="bi bi-check-circle-fill"></i> Thank you! Your request has been received "” we'll call you shortly.
                 </div>
               </div>
             </div>
@@ -151,7 +158,7 @@
         <div class="map-card">
           <div>
             <div class="map-card__pin"><i class="bi bi-geo-alt-fill"></i></div>
-            <h5>Lumina Dental Care — Riverside</h5>
+            <h5>Lumina Dental Care "” Riverside</h5>
             <p>214 Riverside Avenue, New York, NY 10024</p>
             <a href="https://maps.google.com/?q=214+Riverside+Avenue+New+York" class="btn btn-brand rounded-pill px-4" target="_blank" rel="noopener">Get Directions <i class="bi bi-arrow-right ms-2"></i></a>
           </div>
@@ -161,8 +168,8 @@
         <div class="price-list h-100">
           <div class="price-list__head"><span>Opening Hours</span><span>Time</span></div>
           <ul class="hours-list px-4 py-2 m-0">
-            <li><span>Monday – Friday</span><strong>08:00 – 20:00</strong></li>
-            <li><span>Saturday</span><strong>09:00 – 17:00</strong></li>
+            <li><span>Monday "“ Friday</span><strong>08:00 "“ 20:00</strong></li>
+            <li><span>Saturday</span><strong>09:00 "“ 17:00</strong></li>
             <li><span>Sunday</span><strong>Emergency only</strong></li>
             <li><span>Public holidays</span><strong>Emergency only</strong></li>
             <li class="is-today"><span>Today</span><strong>Open now</strong></li>
@@ -179,7 +186,7 @@
     <div class="cta-band d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4" data-reveal="up">
       <div>
         <h2>Prefer to <span class="accent-text">just talk first?</span></h2>
-        <p>Call us and speak to a care coordinator — no scripts, no pressure, just honest advice about your options.</p>
+        <p>Call us and speak to a care coordinator "” no scripts, no pressure, just honest advice about your options.</p>
       </div>
       <div class="d-flex flex-wrap gap-3 position-relative">
         <a href="tel:+18005550199" class="btn btn-light btn-lg rounded-pill px-4"><i class="bi bi-telephone-fill me-2"></i>+1 800 555 0199</a>
@@ -188,3 +195,4 @@
     </div>
   </div>
 </section>
+

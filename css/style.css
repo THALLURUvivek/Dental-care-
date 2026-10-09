@@ -542,6 +542,10 @@ h1,h2,h3,h4,h5,h6{ font-family:var(--font-head); color:var(--ink); line-height:1
   border-color:var(--brand); box-shadow:0 0 0 4px rgba(15,181,168,.14); background:#fff;
 }
 .appt-form .form-control::placeholder{ color:#A9B1BF; }
+.appt-form .form-check-input{ width:18px; height:18px; margin-top:2px; }
+.appt-form .form-check-label{ font-size:.9rem; color:var(--muted); cursor:pointer; }
+.appt-form .form-check-label a{ color:var(--brand-dark); font-weight:600; text-decoration:none; }
+.appt-form .form-check-label a:hover{ text-decoration:underline; }
 .form-success{
   display:flex; align-items:center; gap:10px; background:var(--brand-light);
   color:var(--brand-dark); border:1px solid rgba(15,181,168,.35);
@@ -1225,7 +1229,7 @@ button,a.btn{ -webkit-user-select:none; user-select:none; }
   display:flex; align-items:center; justify-content:center; gap:9px;
   min-height:50px; padding:12px; border-radius:14px;
   border:1.5px solid var(--line); background:var(--white);
-  font-family:var(--font-body); font-weight:600; font-size:.95rem; color:var(--ink);
+  font-family:var(--font-body); font-weight:600; font-size:.95rem; color:var(--ink); text-decoration:none;
   transition:.35s var(--ease);
 }
 .btn-auth-social:hover{ border-color:var(--brand); color:var(--brand-dark); transform:translateY(-2px); box-shadow:var(--shadow-sm); }
@@ -1237,6 +1241,29 @@ button,a.btn{ -webkit-user-select:none; user-select:none; }
   letter-spacing:.12em; text-transform:uppercase;
 }
 .auth__divider::before,.auth__divider::after{ content:''; flex:1; height:1px; background:var(--line); }
+
+/* role toggle */
+.role-toggle{
+  display:flex; gap:12px;
+}
+.role-toggle__input{
+  position:absolute; opacity:0; width:0; height:0;
+}
+.role-toggle__label{
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;
+  padding:16px 12px; border-radius:14px;
+  border:1.5px solid var(--line); background:var(--cream);
+  font-family:var(--font-head); font-weight:700; font-size:.9rem; color:var(--ink-soft);
+  cursor:pointer; transition:.35s var(--ease);
+}
+.role-toggle__label i{ font-size:1.3rem; color:var(--muted); transition:.35s var(--ease); }
+.role-toggle__input:checked + .role-toggle__label{
+  border-color:var(--brand); background:var(--brand-light); color:var(--brand-dark);
+}
+.role-toggle__input:checked + .role-toggle__label i{ color:var(--brand-dark); }
+.role-toggle__input:focus-visible + .role-toggle__label{
+  outline:2px solid var(--brand); outline-offset:2px;
+}
 
 /* fields */
 .field{ margin-bottom:20px; }

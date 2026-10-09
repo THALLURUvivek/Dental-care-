@@ -432,8 +432,10 @@
         let valid = true;
 
         $$('[required]', form).forEach(f => {
-          const ok = f.value.trim() !== '' &&
-            (f.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));
+          const ok = f.type === 'checkbox'
+            ? f.checked
+            : (f.value.trim() !== '' &&
+              (f.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)));
           f.classList.toggle('is-invalid', !ok);
           if (!ok) valid = false;
         });
@@ -459,8 +461,8 @@
         }, 900);
       });
 
-      $$('#apptForm .form-control, #apptForm .form-select').forEach(f =>
-        f.addEventListener('input', () => f.classList.remove('is-invalid')));
+      $$('#apptForm .form-control, #apptForm .form-select, #apptForm .form-check-input').forEach(f =>
+        f.addEventListener(f.type === 'checkbox' ? 'change' : 'input', () => f.classList.remove('is-invalid')));
     }
 
     const news = $('#newsForm');

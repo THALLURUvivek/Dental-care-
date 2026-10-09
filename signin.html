@@ -33,7 +33,7 @@
       <span class="brand-word"><img class="brand-logo" src="images/image.png" alt="Lumina Dental Care"></span>
     </div>
     <div class="preloader__bar"><span></span></div>
-    <p class="preloader__hint">Preparing your perfect smileâ€¦</p>
+    <p class="preloader__hint">Preparing your perfect smile…</p>
   </div>
 </div>
 
@@ -51,7 +51,7 @@
       <div class="topbar__info d-flex gap-4">
         <span><i class="bi bi-geo-alt-fill"></i> 214 Riverside Avenue, New York, NY</span>
         <span><i class="bi bi-telephone-fill"></i> +1 (800) 555-0199</span>
-        <span><i class="bi bi-clock-fill"></i> Monâ€“Sat: 08:00 â€“ 20:00</span>
+        <span><i class="bi bi-clock-fill"></i> Mon"“Sat: 08:00 "“ 20:00</span>
       </div>
       <div class="topbar__social d-flex align-items-center gap-3">
         <span class="text-uppercase small">Follow us</span>
@@ -123,7 +123,7 @@
         <div>
           <span class="eyebrow eyebrow--light">Patient Portal</span>
           <h2>Welcome back to your <span class="accent-text">smile journey</span></h2>
-          <p class="auth__lead">Sign in to manage appointments, view treatment plans and download invoices â€” all in one secure place.</p>
+          <p class="auth__lead">Sign in to manage appointments, view treatment plans and download invoices "” all in one secure place.</p>
           <ul class="auth__perks">
             <li><i class="bi bi-calendar2-check-fill"></i><span>Book or reschedule visits in seconds</span></li>
             <li><i class="bi bi-file-earmark-medical-fill"></i><span>Access X-rays, prescriptions and history</span></li>
@@ -137,8 +137,8 @@
             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Patient">
             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Patient">
           </div>
-          <p class="mb-0">â€œMy whole family's care lives here now â€” bookings, reminders, even my kids' sealant records.â€</p>
-          <small class="auth__quote-by">â€” Maria G., patient since 2021</small>
+          <p class="mb-0">"My whole family's care lives here now "” bookings, reminders, even my kids' sealant records."</p>
+          <small class="auth__quote-by">"” Maria G., patient since 2021</small>
         </div>
       </aside>
 
@@ -155,24 +155,41 @@
           <i class="bi bi-check-circle-fill"></i>
           <div>
             <strong>Account created successfully</strong>
-            <p class="mb-0">Welcome to Lumina Dental â€” sign in with your new credentials to open your portal.</p>
+            <p class="mb-0">Welcome to Lumina Dental "” sign in with your new credentials to open your portal.</p>
           </div>
         </div>
 
         <div class="auth__social">
-          <button type="button" class="btn-auth-social" data-social="Google"><i class="bi bi-google"></i> Google</button>
+          <a class="btn-auth-social" href="404.html"><i class="bi bi-google"></i> Google</a>
           <button type="button" class="btn-auth-social" data-social="Apple"><i class="bi bi-apple"></i> Apple</button>
         </div>
         <div class="auth__divider"><span>or continue with email</span></div>
 
         <form data-auth="signin" novalidate>
-          <div class="field">
+<div class="field">
             <label for="siEmail">Email address</label>
             <div class="field__box">
               <i class="bi bi-envelope"></i>
               <input type="email" class="form-control" id="siEmail" placeholder="you@example.com" required autocomplete="email">
             </div>
             <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label class="form-label">Role</label>
+            <div class="role-toggle" role="radiogroup" aria-label="Select role">
+              <input type="radio" class="role-toggle__input" name="siRole" id="siRolePatient" value="patient" required checked>
+              <label class="role-toggle__label" for="siRolePatient">
+                <i class="bi bi-person"></i>
+                <span>Patient</span>
+              </label>
+              <input type="radio" class="role-toggle__input" name="siRole" id="siRoleDoctor" value="doctor">
+              <label class="role-toggle__label" for="siRoleDoctor">
+                <i class="bi bi-heart-pulse"></i>
+                <span>Doctor</span>
+              </label>
+            </div>
+            <div class="invalid-feedback">Please select your role.</div>
           </div>
 
           <div class="field">
@@ -188,6 +205,11 @@
           <div class="auth__row">
             <label class="auth__check"><input type="checkbox" checked> <span>Remember me</span></label>
             <a href="forgot.html">Forgot password?</a>
+          </div>
+
+          <div class="field">
+            <label class="auth__check"><input type="checkbox" id="siTerms" required> <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span></label>
+            <div class="invalid-feedback">Please accept the terms to continue.</div>
           </div>
 
           <button type="submit" class="btn btn-brand w-100 auth__submit">Sign In <i class="bi bi-arrow-right ms-2"></i></button>
@@ -210,12 +232,12 @@
           <span class="brand-mark"><i class="bi bi-stars"></i></span>
           <img class="brand-logo" src="images/image.png" alt="Lumina Dental Care">
         </a>
-        <p class="text-white-50 mb-4">A modern dental studio where advanced technology meets genuine human care â€” because everyone deserves a smile they're proud of.</p>
+        <p class="text-white-50 mb-4">A modern dental studio where advanced technology meets genuine human care "” because everyone deserves a smile they're proud of.</p>
         <div class="footer__social d-flex gap-2">
-          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="404.html" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
 
@@ -252,8 +274,8 @@
           <button class="btn btn-brand rounded-pill px-4" type="submit"><i class="bi bi-send-fill"></i></button>
         </form>
         <div class="footer__hours small text-white-50">
-          <div class="d-flex justify-content-between border-bottom py-2"><span>Mon â€“ Fri</span><strong class="text-white">08:00 â€“ 20:00</strong></div>
-          <div class="d-flex justify-content-between border-bottom py-2"><span>Saturday</span><strong class="text-white">09:00 â€“ 17:00</strong></div>
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Mon "“ Fri</span><strong class="text-white">08:00 "“ 20:00</strong></div>
+          <div class="d-flex justify-content-between border-bottom py-2"><span>Saturday</span><strong class="text-white">09:00 "“ 17:00</strong></div>
           <div class="d-flex justify-content-between py-2"><span>Sunday</span><strong class="text-white">Emergency only</strong></div>
         </div>
       </div>
@@ -279,4 +301,5 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
